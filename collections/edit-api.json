@@ -2786,8 +2786,7 @@
               "script": {
                 "id": "542be4bc-2b50-4533-9eb9-b37422aab6dc",
                 "exec": [
-                  "var jsonData = JSON.parse(responseBody);\r",
-                  "postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
                 "type": "text/javascript"
@@ -2799,6 +2798,13 @@
             "disableBodyPruning": true
           },
           "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "key": "x-api-key"
+              }
+            },
             "method": "POST",
             "header": [
               {
