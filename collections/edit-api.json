@@ -3007,7 +3007,7 @@
           "response": []
         },
         {
-          "name": "Luma Matte Demo - Arrow Transitions Copy",
+          "name": "Arrow Transition",
           "event": [
             {
               "listen": "test",
