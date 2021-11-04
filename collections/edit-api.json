@@ -3061,6 +3061,62 @@
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
           "response": []
+        },
+        {
+          "name": "Arrow Transition Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "3aab45d9-5faa-4171-8e30-e61c0feea859",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "8dd9f5fc-3fba-4c0c-af20-95ba20d9fe6a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/palmtrees.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Luma Matte Demo\",\n                            \"style\": \"future\",\n                            \"size\": \"small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3.5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"luma\",\n                            \"src\": \"https://templates.shotstack.io/basic/asset/video/luma/double-arrow/double-arrow-down.mp4\"\n                        },\n                        \"start\": 3,\n                        \"length\": 2\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/table-mountain.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 4,\n                        \"transition\": {\n                            \"in\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"luma\",\n                            \"src\": \"https://templates.shotstack.io/basic/asset/video/luma/double-arrow/double-arrow-up.mp4\"\n                        },\n                        \"start\": 6,\n                        \"length\": 2\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/road.mp4\"\n                        },\n                        \"start\": 3,\n                        \"length\": 4\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"luma\",\n                            \"src\": \"https://templates.shotstack.io/basic/asset/video/luma/double-arrow/double-arrow-right.mp4\"\n                        },\n                        \"start\": 9,\n                        \"length\": 2\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/lake.mp4\"\n                        },\n                        \"start\": 6,\n                        \"length\": 4\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"luma\",\n                            \"src\": \"https://templates.shotstack.io/basic/asset/video/luma/double-arrow/double-arrow-left.mp4\"\n                        },\n                        \"start\": 12,\n                        \"length\": 2\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/beach-cliffs.mp4\"\n                        },\n                        \"start\": 9,\n                        \"length\": 4\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/night-sky.mp4\"\n                        },\n                        \"start\": 12,\n                        \"length\": 4,\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\",\n        \"destinations\": [\n            {\n                \"provider\": \"shotstack\",\n                \"exclude\": true\n            }\n        ]\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render"
+          },
+          "response": []
         }
       ],
       "id": "e2eca8da-511b-47f4-94f7-f3bc8950c007",
