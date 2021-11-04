@@ -2835,7 +2835,7 @@
           "response": []
         },
         {
-          "name": "Arrow Transition Copy",
+          "name": "Arrow 45deg Transition",
           "event": [
             {
               "listen": "test",
