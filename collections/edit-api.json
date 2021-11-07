@@ -182,6 +182,7 @@
         }
       ],
       "id": "b6bcd9b5-1f52-4648-8619-6d432093a6a3",
+      "description": "Audio editing and manipulation templates.",
       "auth": {
         "type": "apikey",
         "apikey": {
