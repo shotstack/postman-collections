@@ -5553,6 +5553,7 @@
         }
       ],
       "id": "6c47c7a6-8268-4fc5-81e8-72766ebffede",
+      "description": "Modify clips using rotate, skew and transform.",
       "auth": {
         "type": "apikey",
         "apikey": {
