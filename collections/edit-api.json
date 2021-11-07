@@ -4026,6 +4026,7 @@
         }
       ],
       "id": "60c3bb82-537a-4c5b-aa7d-94dc18071743",
+      "description": "Add text using the language of your choice.",
       "auth": {
         "type": "apikey",
         "apikey": {
