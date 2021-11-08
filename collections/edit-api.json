@@ -217,7 +217,7 @@
       "name": "Basic Edits",
       "item": [
         {
-          "name": "Basic Edit (Title, Image, Video)",
+          "name": "Title, Image & Video",
           "event": [
             {
               "listen": "test",
