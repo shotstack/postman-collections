@@ -333,6 +333,7 @@
         }
       ],
       "id": "371a04a6-5b50-4928-b283-218bab748689",
+      "description": "Simple video edits to get started and for benchmarking.",
       "auth": {
         "type": "apikey",
         "apikey": {
