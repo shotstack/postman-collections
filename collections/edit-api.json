@@ -539,6 +539,7 @@
         }
       ],
       "id": "de1d8d6e-952e-4563-a317-1bb1043282aa",
+      "description": "Cropping assets to adjust their shape and area, plus split screen layout effect.",
       "auth": {
         "type": "apikey",
         "apikey": {
