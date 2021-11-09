@@ -1007,7 +1007,7 @@
           "response": []
         },
         {
-          "name": "Darken",
+          "name": "Darken Filter",
           "event": [
             {
               "listen": "test",
