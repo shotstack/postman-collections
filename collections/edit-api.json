@@ -1289,6 +1289,7 @@
         }
       ],
       "id": "74b6ecbc-2762-4a2e-a674-429700ca5f76",
+      "description": "Filters to adjust colors, contrast and saturation.",
       "auth": {
         "type": "apikey",
         "apikey": {
@@ -2074,6 +2075,7 @@
         }
       ],
       "id": "3e82dff7-a752-47a1-b77c-4ba1b9bfa4e0",
+      "description": "HTML text styling, layouts, tables, lower thirds and background panels.",
       "auth": {
         "type": "apikey",
         "apikey": {
