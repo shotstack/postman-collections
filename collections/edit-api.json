@@ -3394,6 +3394,7 @@
         }
       ],
       "id": "3c48370e-fc6a-4534-987b-3983226b3dd6",
+      "description": "Utility based templates and common use cases.",
       "auth": {
         "type": "apikey",
         "apikey": {
