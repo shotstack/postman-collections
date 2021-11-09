@@ -803,6 +803,7 @@
         }
       ],
       "id": "00ebccea-841f-47ca-bec4-d7e1c7c60d01",
+      "description": "Dissolve or fade between multiple video clips or to black.",
       "auth": {
         "type": "apikey",
         "apikey": {
