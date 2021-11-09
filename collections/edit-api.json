@@ -951,7 +951,7 @@
           "response": []
         },
         {
-          "name": "Contrast",
+          "name": "Contrast Filter",
           "event": [
             {
               "listen": "test",
