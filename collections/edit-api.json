@@ -1119,7 +1119,7 @@
           "response": []
         },
         {
-          "name": "Lighten",
+          "name": "Lighten Filter",
           "event": [
             {
               "listen": "test",
