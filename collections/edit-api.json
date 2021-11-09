@@ -3128,6 +3128,7 @@
         }
       ],
       "id": "e2eca8da-511b-47f4-94f7-f3bc8950c007",
+      "description": "Alpha transparency effects and transitions using Luma Mattes.",
       "auth": {
         "type": "apikey",
         "apikey": {
