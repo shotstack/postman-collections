@@ -2638,6 +2638,7 @@
         }
       ],
       "id": "a7f75a32-d5e0-4bb3-9094-812525848a01",
+      "description": "Ken Burns slideshow videos using still images and simple panning and zooming.",
       "auth": {
         "type": "apikey",
         "apikey": {
