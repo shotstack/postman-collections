@@ -1175,7 +1175,7 @@
           "response": []
         },
         {
-          "name": "Muted",
+          "name": "Muted Filter",
           "event": [
             {
               "listen": "test",
