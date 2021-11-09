@@ -2453,6 +2453,7 @@
         }
       ],
       "id": "558ecebb-0790-4a08-940d-5f060a499d5c",
+      "description": "Image layouts, designs and frame grabs.",
       "auth": {
         "type": "apikey",
         "apikey": {
