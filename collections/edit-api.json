@@ -3655,63 +3655,6 @@
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
           "response": []
-        },
-        {
-          "name": "Slide Down/Up Text Effect Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "58a3723d-f90b-4022-8701-db34f53b9574",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "f275c682-e8a7-4754-ba5b-339d59a26937",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/palmtrees.mp3\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>HELLO</p>\",\n                            \"css\": \"p { font-family: 'Montserrat ExtraBold'; color: #ffffff; font-size: 34px; text-align: left; }\",\n                            \"width\": 600,\n                            \"height\": 400\n                        },\n                        \"start\": 1.2,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"slideDown\",\n                            \"out\": \"slideUp\"\n                        },\n                        \"position\": \"left\",\n                        \"offset\": {\n                            \"x\": 0.05,\n                            \"y\": 0.05\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>SHOTSACK</p>\",\n                            \"css\": \"p { font-family: 'Montserrat ExtraBold'; color: #ffffff; font-size: 34px; text-align: left; }\",\n                            \"width\": 600,\n                            \"height\": 400\n                        },\n                        \"start\": 1.3,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"slideDown\",\n                            \"out\": \"slideUp\"\n                        },\n                        \"position\": \"left\",\n                        \"offset\": {\n                            \"x\": 0.05,\n                            \"y\": 0\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>VIDEO</p>\",\n                            \"css\": \"p { font-family: 'Montserrat ExtraBold'; color: #ffffff; font-size: 34px; text-align: left; }\",\n                            \"width\": 600,\n                            \"height\": 400\n                        },\n                        \"start\": 1.4,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"slideDown\",\n                            \"out\": \"slideUp\"\n                        },\n                        \"position\": \"left\",\n                        \"offset\": {\n                            \"x\": 0.05,\n                            \"y\": -0.05\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
-          },
-          "response": []
         }
       ],
       "id": "22285dc3-2322-463f-812e-9bdb5b363211",
