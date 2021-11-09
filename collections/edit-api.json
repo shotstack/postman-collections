@@ -3658,6 +3658,7 @@
         }
       ],
       "id": "22285dc3-2322-463f-812e-9bdb5b363211",
+      "description": "Motion effects applied to text and assets.",
       "auth": {
         "type": "apikey",
         "apikey": {
