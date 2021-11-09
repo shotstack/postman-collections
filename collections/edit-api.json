@@ -2673,7 +2673,7 @@
       "name": "Luma Mattes",
       "item": [
         {
-          "name": "Advanced",
+          "name": "Multiple Luma Matte Transitions",
           "event": [
             {
               "listen": "test",
