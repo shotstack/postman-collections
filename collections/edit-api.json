@@ -4012,6 +4012,69 @@
       ]
     },
     {
+      "name": "Overlays",
+      "item": [
+        {
+          "name": "Overlay Transition",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "4eeb44b5-b791-46ff-b602-32d2a52f0784"
+              }
+            }
+          ],
+          "id": "6ac765fd-0dbb-45f3-90c6-06fc2c935b45",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/lit.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Shotstack Overlays\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"bottomLeft\"\n                        },\n                        \"start\": 1,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/overlays/shapes-transition.mov\"\n                        },\n                        \"start\": 5.5,\n                        \"length\": 2.68\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                \t{\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/hot-air-balloons-1.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 7,\n                        \"transition\": {\n                            \"in\": \"fade\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/hot-air-balloons-2.mp4\"\n                        },\n                        \"start\": 7,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render"
+          },
+          "response": []
+        }
+      ],
+      "id": "957523ad-feb7-4ab0-ace7-6565df740c29"
+    },
+    {
       "name": "Overlay Kits",
       "item": [
         {
@@ -4187,69 +4250,6 @@
         }
       ],
       "id": "2729df09-9de9-41a1-9aaa-d40aa0068949"
-    },
-    {
-      "name": "Overlays",
-      "item": [
-        {
-          "name": "Overlay Transition",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "4eeb44b5-b791-46ff-b602-32d2a52f0784"
-              }
-            }
-          ],
-          "id": "6ac765fd-0dbb-45f3-90c6-06fc2c935b45",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/lit.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Shotstack Overlays\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"bottomLeft\"\n                        },\n                        \"start\": 1,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/overlays/shapes-transition.mov\"\n                        },\n                        \"start\": 5.5,\n                        \"length\": 2.68\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                \t{\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/hot-air-balloons-1.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 7,\n                        \"transition\": {\n                            \"in\": \"fade\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/hot-air-balloons-2.mp4\"\n                        },\n                        \"start\": 7,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
-          },
-          "response": []
-        }
-      ],
-      "id": "957523ad-feb7-4ab0-ace7-6565df740c29"
     },
     {
       "name": "Positioning",
