@@ -1333,12 +1333,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "5ed9cd8d-363c-4e89-b39c-d77bb20dea35",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "5ed9cd8d-363c-4e89-b39c-d77bb20dea35"
+                "type": "text/javascript"
               }
             }
           ],
@@ -1364,7 +1364,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"future\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"future\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
             },
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
