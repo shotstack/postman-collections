@@ -4698,7 +4698,8 @@
               "mode": "raw",
               "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/footage/table-mountain.mp4\",\n                            \"volume\": 1\n                        },\n                        \"start\": 0,\n                        \"length\": 18.793333\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
             },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "1080p to 720p transcoding template. Convert a video from 1080p resolution to 720p.\n\n![Transcode 1080 to 720 preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/68a8f0d6-e77f-4143-ade4-d35c53acc32f.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/7ffdfa84-5b75-4ec2-907c-47d66d64bb7e.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/7ffdfa84-5b75-4ec2-907c-47d66d64bb7e.mp4\",\n  \"description\": \"1080p to 720p transcoding template. Convert a video from 1080p resolution to 720p.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/7ffdfa84-5b75-4ec2-907c-47d66d64bb7e-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/7ffdfa84-5b75-4ec2-907c-47d66d64bb7e-poster.jpg\",\n  \"permalink\": \"transcode-1080-to-720\"\n}\n-->"
           },
           "response": []
         },
