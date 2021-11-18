@@ -369,7 +369,7 @@
       "name": "Crop",
       "item": [
         {
-          "name": "Basic",
+          "name": "Top & Left Crop Example",
           "event": [
             {
               "listen": "test",
