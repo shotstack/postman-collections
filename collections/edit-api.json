@@ -372,7 +372,7 @@
       "name": "Crop",
       "item": [
         {
-          "name": "Top & Left Crop Example",
+          "name": "Top & left crop",
           "event": [
             {
               "listen": "test",
