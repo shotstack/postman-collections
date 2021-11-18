@@ -131,12 +131,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "90eb5c78-a61b-4581-8838-9f7253406db9",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "90eb5c78-a61b-4581-8838-9f7253406db9"
+                "type": "text/javascript"
               }
             }
           ],
@@ -176,7 +176,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Volume Adjustments\",\n                            \"style\": \"marker\",\n                            \"size\": \"small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 12,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.25,\n                            \"trim\": 3.96\n\n                        },\n                        \"start\": 4,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.8,\n                            \"trim\": 7.96\n\n                        },\n                        \"start\": 8,\n                        \"length\": 3.96\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.25,\n                            \"trim\": 3.96\n\n                        },\n                        \"start\": 4,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.8,\n                            \"trim\": 7.96\n\n                        },\n                        \"start\": 8,\n                        \"length\": 3.96\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
             },
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
