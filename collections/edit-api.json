@@ -430,7 +430,7 @@
           "response": []
         },
         {
-          "name": "Splitscreen crop",
+          "name": "Splitscreen crop effects",
           "event": [
             {
               "listen": "test",
