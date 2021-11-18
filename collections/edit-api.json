@@ -68,7 +68,7 @@
           "response": []
         },
         {
-          "name": "Audio Seamless Stitch",
+          "name": "Seamless audio stitch",
           "event": [
             {
               "listen": "test",
