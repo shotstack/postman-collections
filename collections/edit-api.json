@@ -278,7 +278,7 @@
           "response": []
         },
         {
-          "name": "1 Minute Video",
+          "name": "1 minute video",
           "event": [
             {
               "listen": "test",
