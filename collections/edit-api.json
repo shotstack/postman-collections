@@ -73,12 +73,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "7e6e5f5e-b155-4bc1-9203-e02052175427",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "7e6e5f5e-b155-4bc1-9203-e02052175427"
+                "type": "text/javascript"
               }
             }
           ],
