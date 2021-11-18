@@ -126,7 +126,7 @@
           "response": []
         },
         {
-          "name": "Audio Multiple Volumes",
+          "name": "Audio multiple volumes",
           "event": [
             {
               "listen": "test",
