@@ -487,7 +487,7 @@
           "response": []
         },
         {
-          "name": "Splitscreen with Zoom",
+          "name": "Splitscreen with zoom",
           "event": [
             {
               "listen": "test",
