@@ -10,7 +10,7 @@
       "name": "Audio",
       "item": [
         {
-          "name": "Simple Audio Stitch",
+          "name": "Simple audio stitch",
           "event": [
             {
               "listen": "test",
