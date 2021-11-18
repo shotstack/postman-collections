@@ -15,12 +15,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "85196074-8712-4870-9375-5aa285f6e160",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "85196074-8712-4870-9375-5aa285f6e160"
+                "type": "text/javascript"
               }
             }
           ],
@@ -60,7 +60,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Sound Check\",\n                            \"style\": \"minimal\",\n                            \"size\": \"x-small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 10,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"effect\": \"fadeInFadeOut\"\n                        },\n                        \"start\": 1,\n                        \"length\": 8\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"effect\": \"fadeIn\",\n                            \"trim\": 30\n                        },\n                        \"start\": 10,\n                        \"length\": 8\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"sd\"\n    }\n}"
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"effect\": \"fadeInFadeOut\"\n                        },\n                        \"start\": 1,\n                        \"length\": 8\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"effect\": \"fadeIn\",\n                            \"trim\": 30\n                        },\n                        \"start\": 10,\n                        \"length\": 8\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"sd\"\n    }\n}"
             },
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
