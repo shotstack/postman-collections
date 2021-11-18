@@ -62,7 +62,8 @@
               "mode": "raw",
               "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 8\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/unminus/ambisax.mp3\",\n                            \"effect\": \"fadeOut\"\n                        },\n                        \"start\": 8,\n                        \"length\": 8\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"sd\"\n    }\n}"
             },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Merge/stitch two audio clips together to create a single track.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/ecac713c-fc16-4cab-87b5-be4559e106d4.mp3)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/ecac713c-fc16-4cab-87b5-be4559e106d4.mp3\",\n  \"description\": \"Merge/stitch two audio clips together to create a single track.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-stitch-2-tracks\"\n}\n-->"
           },
           "response": []
         },
