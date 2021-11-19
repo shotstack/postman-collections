@@ -4666,6 +4666,64 @@
           "response": []
         },
         {
+          "name": "60fps to 30fps Conversion",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "3782b7bc-e985-44ca-a8d3-52e9e53ff16c"
+              }
+            }
+          ],
+          "id": "e7ce8176-b0a2-4227-ab69-b567bcaa6755",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/private/epic.mp3\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"30 fps\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"bottomLeft\"\n                        },\n                        \"start\": 1.2,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/drone-road-30fps.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 10\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\",\n        \"fps\": 30\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "The fps property provides you with the ability to use different frame rates dependent on your requirements.\n\n![30fps video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/a33edd45-d7c8-4660-b629-4d97f2a11226.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3.mp4\",\n  \"description\": \"The fps property provides you with the ability to use different frame rates dependent on your requirements.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3-poster.jpg\",\n  \"permalink\": \"50fps-to-25fps\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
           "name": "Transcode 1080 to 720",
           "event": [
             {
