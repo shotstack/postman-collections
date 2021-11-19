@@ -1432,7 +1432,7 @@
         }
       ],
       "id": "ac22df2f-18f4-4fe3-919e-6904e43437fe",
-      "description": "The obligatory Hello World examples.",
+      "description": "Hello World examples. If you are new to Shotstack try these examples first.",
       "auth": {
         "type": "apikey",
         "apikey": {
