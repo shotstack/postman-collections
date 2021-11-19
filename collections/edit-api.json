@@ -4340,7 +4340,8 @@
               "mode": "raw",
               "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/branding/logo-reverse.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"png\",\n        \"resolution\": \"sd\"\n    }\n}"
             },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A template where the source footage at 50fps is converted to 25fps.\n\n![50fps to 25fps video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/a33edd45-d7c8-4660-b629-4d97f2a11226.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3.mp4\",\n  \"description\": \"A template where the source footage at 50fps is converted to 25fps.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a189f41c-3aad-4732-a9d4-0ee3fd050ed3-poster.jpg\",\n  \"permalink\": \"default-positioning\"\n}\n-->"
           },
           "response": []
         },
