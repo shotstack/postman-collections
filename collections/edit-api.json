@@ -2363,7 +2363,7 @@
           "response": []
         },
         {
-          "name": "Pexels Demo Template",
+          "name": "Photo with border & text",
           "event": [
             {
               "listen": "test",
