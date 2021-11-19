@@ -6040,6 +6040,7 @@
         }
       ],
       "id": "5ee5e679-601f-419c-a775-e4c366298181",
+      "description": "Transition from one clip to another using built in animations and effects.",
       "auth": {
         "type": "apikey",
         "apikey": {
