@@ -4613,6 +4613,7 @@
         }
       ],
       "id": "94bb6980-b33f-4fe4-b85d-d5f42f0768dc",
+      "description": "Fundamental positioning and layout techniques to place assets where you want them in your edits.",
       "auth": {
         "type": "apikey",
         "apikey": {
