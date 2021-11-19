@@ -4133,7 +4133,8 @@
           "response": []
         }
       ],
-      "id": "957523ad-feb7-4ab0-ace7-6565df740c29"
+      "id": "957523ad-feb7-4ab0-ace7-6565df740c29",
+      "description": "Animated overlays used to create transition effects, lower third and motion graphic effects."
     },
     {
       "name": "Overlay Kits",
