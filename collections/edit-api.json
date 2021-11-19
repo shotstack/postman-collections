@@ -5143,7 +5143,7 @@
           "response": []
         },
         {
-          "name": "Real Estate Slideshow (SD)",
+          "name": "Real Estate Slideshow",
           "event": [
             {
               "listen": "test",
