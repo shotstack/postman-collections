@@ -1080,11 +1080,11 @@
             {
               "listen": "test",
               "script": {
+                "id": "7c78dc5d-8ef7-4497-bcb6-6a94f2048a5c",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);"
                 ],
-                "type": "text/javascript",
-                "id": "7c78dc5d-8ef7-4497-bcb6-6a94f2048a5c"
+                "type": "text/javascript"
               }
             }
           ],
@@ -1124,7 +1124,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"filter\": \"greyscale\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3,\n                        \"filter\": \"greyscale\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"filter\": \"greyscale\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3,\n                        \"filter\": \"greyscale\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
             },
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
