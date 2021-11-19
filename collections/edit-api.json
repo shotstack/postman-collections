@@ -1467,7 +1467,7 @@
       "name": "HTML",
       "item": [
         {
-          "name": "Simple",
+          "name": "Simple HTML text styling",
           "event": [
             {
               "listen": "test",
