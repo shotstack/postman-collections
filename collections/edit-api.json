@@ -3065,12 +3065,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "6bce4e5a-2062-4f96-a858-bf5d572d7f51",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "6bce4e5a-2062-4f96-a858-bf5d572d7f51"
+                "type": "text/javascript"
               }
             }
           ],
@@ -3110,7 +3110,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/palmtrees.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#ffffff\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Merry Christmas\",\n                            \"style\": \"marker\",\n                            \"size\": \"small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 4.5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                \t{\n                        \"asset\": {\n                            \"type\": \"luma\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/luma-mattes/snowflakes.mov\"\n                        },\n                        \"start\": 0,\n                        \"length\": 10,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/table-mountain.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 10\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/palmtrees.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#ffffff\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Merry Christmas\",\n                            \"style\": \"marker\",\n                            \"size\": \"small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 4.5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                \t{\n                        \"asset\": {\n                            \"type\": \"luma\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/luma-mattes/snowflakes.mov\"\n                        },\n                        \"start\": 0,\n                        \"length\": 10,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/table-mountain.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 10\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
             },
             "url": "https://api.shotstack.io/{{ENV}}/render"
           },
