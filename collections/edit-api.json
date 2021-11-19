@@ -1381,7 +1381,8 @@
               "mode": "raw",
               "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"future\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
             },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Hello World title video. The simplest video you can create.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/0c4af8d5-7223-4099-b500-ba20ea3e82c0.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/521af92c-15ce-4ac5-b18f-b43687913b57.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/521af92c-15ce-4ac5-b18f-b43687913b57.mp4\",\n  \"description\": \"Hello World title video. The simplest video you can create.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/521af92c-15ce-4ac5-b18f-b43687913b57-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/521af92c-15ce-4ac5-b18f-b43687913b57-poster.jpg\",\n  \"permalink\": \"hello-world-title\"\n}\n-->"
           },
           "response": []
         },
