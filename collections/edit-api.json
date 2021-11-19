@@ -4518,7 +4518,8 @@
               "mode": "raw",
               "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/branding/logo-reverse.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"offset\": {\n                            \"x\": 0.25\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"png\",\n        \"resolution\": \"sd\"\n    }\n}"
             },
-            "url": "https://api.shotstack.io/{{ENV}}/render"
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Template that positions an asset 25% to the right of the viewport.\n\n![Top right positioning preview](https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2-thumb.jpg)\n\n[Example image](https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2.png)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2.png\",\n  \"description\": \"Template that positions an asset 25% to the right of the viewport.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2.png\",\n  \"permalink\": \"offset-positioning\"\n}\n-->"
           },
           "response": []
         },
