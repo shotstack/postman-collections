@@ -4881,6 +4881,7 @@
         }
       ],
       "id": "a81cd538-3f56-4593-8050-53ea89c78d7c",
+      "description": "Video and image processing templates including transcoding, frame rate conversion and trimming video.",
       "auth": {
         "type": "apikey",
         "apikey": {
