@@ -2421,7 +2421,7 @@
           "response": []
         },
         {
-          "name": "Banner ad",
+          "name": "Leaderboard banner ad",
           "event": [
             {
               "listen": "test",
