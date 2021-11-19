@@ -4360,12 +4360,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "4a44ff14-bebc-4c3e-b126-87bd00a983c6",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "4a44ff14-bebc-4c3e-b126-87bd00a983c6"
+                "type": "text/javascript"
               }
             }
           ],
@@ -4405,7 +4405,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/branding/logo-reverse.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"position\": \"topRight\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"png\",\n        \"resolution\": \"sd\"\n    }\n}"
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/branding/logo-reverse.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"position\": \"topRight\"\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"png\",\n        \"resolution\": \"hd\"\n    }\n}"
             },
             "url": "https://api.shotstack.io/{{ENV}}/render",
             "description": "Template that positions an asset in the top-right corner of the viewport.\n\n![Top right positioning preview](https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2-thumb.jpg)\n\n[Example image](https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2.png)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2.png\",\n  \"description\": \"Template that positions an asset in the top-right corner of the viewport.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fc3fcef6-136a-45b4-945b-5a25a6edefe2.png\",\n  \"permalink\": \"default-positioning\"\n}\n-->"
