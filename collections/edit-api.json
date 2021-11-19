@@ -5201,7 +5201,7 @@
           "response": []
         },
         {
-          "name": "Real Estate Slideshow (SD) (merge fields)",
+          "name": "Real Estate Slideshow with merge fields",
           "event": [
             {
               "listen": "test",
