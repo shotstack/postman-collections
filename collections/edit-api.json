@@ -5091,6 +5091,7 @@
         }
       ],
       "id": "006f7b61-1942-41d6-aaa0-6a54808e163d",
+      "description": "Adjust the output quality of videos and images to optimise storage and download speed.",
       "auth": {
         "type": "apikey",
         "apikey": {
