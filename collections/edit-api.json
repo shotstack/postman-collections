@@ -639,7 +639,7 @@
           "response": []
         },
         {
-          "name": "Dissolve Tracks - Slow",
+          "name": "Slow dissolve (fade) tracks",
           "event": [
             {
               "listen": "test",
