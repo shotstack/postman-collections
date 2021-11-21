@@ -581,7 +581,7 @@
       "name": "Dissolves",
       "item": [
         {
-          "name": "Dissolve Tracks",
+          "name": "Dissolve (fade) tracks",
           "event": [
             {
               "listen": "test",
