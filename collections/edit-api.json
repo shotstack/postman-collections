@@ -2576,7 +2576,7 @@
           "response": []
         },
         {
-          "name": "Ken Burns Effect - Slow",
+          "name": "Ken burns slideshow effect (slow)",
           "event": [
             {
               "listen": "test",
