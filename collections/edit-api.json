@@ -3060,7 +3060,7 @@
           "response": []
         },
         {
-          "name": "Snow Luma Matte Effect",
+          "name": "Snow effect using luma matte",
           "event": [
             {
               "listen": "test",
