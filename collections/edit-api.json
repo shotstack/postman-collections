@@ -1640,7 +1640,7 @@
           "response": []
         },
         {
-          "name": "Text Shadow Flat",
+          "name": "Text flat drop shadow",
           "event": [
             {
               "listen": "test",
