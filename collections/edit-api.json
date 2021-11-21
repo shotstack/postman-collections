@@ -3118,7 +3118,7 @@
           "response": []
         },
         {
-          "name": "Circle Mask",
+          "name": "Circle mask",
           "event": [
             {
               "listen": "test",
