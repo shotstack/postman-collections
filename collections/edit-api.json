@@ -2944,7 +2944,7 @@
           "response": []
         },
         {
-          "name": "Wipe Transition",
+          "name": "Wipe transition",
           "event": [
             {
               "listen": "test",
