@@ -6126,7 +6126,8 @@
       "request": {
         "method": "GET",
         "header": [],
-        "url": "https://api.shotstack.io/{{ENV}}/probe/https%3A%2F%2Fgithub.com%2Fshotstack%2Ftest-media%2Fraw%2Fmain%2Fcaptioning%2Fscott-ko.mp4"
+        "url": "https://api.shotstack.io/{{ENV}}/probe/https%3A%2F%2Fgithub.com%2Fshotstack%2Ftest-media%2Fraw%2Fmain%2Fcaptioning%2Fscott-ko.mp4",
+        "description": "Fetch metadata from any media file online.\n\nThe URL must be URL encoded and appended after `/probe`."
       },
       "response": []
     }
