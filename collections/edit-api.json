@@ -4322,7 +4322,7 @@
       "name": "Positioning",
       "item": [
         {
-          "name": "Default",
+          "name": "Default (centered) positioning",
           "event": [
             {
               "listen": "test",
