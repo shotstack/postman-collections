@@ -5532,7 +5532,7 @@
           "response": []
         },
         {
-          "name": "Mirror Timelapse Effect",
+          "name": "Mirror timelapse effect",
           "event": [
             {
               "listen": "test",
