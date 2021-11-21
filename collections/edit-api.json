@@ -4764,7 +4764,7 @@
           "response": []
         },
         {
-          "name": "Transcode 1080 to 720",
+          "name": "Transcode to HD 720p",
           "event": [
             {
               "listen": "test",
