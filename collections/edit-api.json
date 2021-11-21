@@ -5865,7 +5865,7 @@
           "response": []
         },
         {
-          "name": "Carousel - Slow",
+          "name": "Carousel right to left (slow)",
           "event": [
             {
               "listen": "test",
