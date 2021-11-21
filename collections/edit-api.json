@@ -3540,7 +3540,7 @@
           "response": []
         },
         {
-          "name": "Slide Text Effect - Slow",
+          "name": "Slide text effect (slow)",
           "event": [
             {
               "listen": "test",
