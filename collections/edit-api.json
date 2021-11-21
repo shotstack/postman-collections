@@ -3656,7 +3656,7 @@
           "response": []
         },
         {
-          "name": "Slide Up/Down Text Effect",
+          "name": "Slide up/down text effect",
           "event": [
             {
               "listen": "test",
