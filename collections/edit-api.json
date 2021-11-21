@@ -2714,7 +2714,7 @@
       "name": "Luma Mattes",
       "item": [
         {
-          "name": "SImple luma matte transitions",
+          "name": "Simple luma matte transitions",
           "event": [
             {
               "listen": "test",
