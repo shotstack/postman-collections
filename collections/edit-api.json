@@ -964,7 +964,7 @@
           "response": []
         },
         {
-          "name": "Contrast Filter",
+          "name": "Contrast filter",
           "event": [
             {
               "listen": "test",
