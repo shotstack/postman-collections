@@ -5807,7 +5807,7 @@
       "name": "Transitions",
       "item": [
         {
-          "name": "Carousel",
+          "name": "Carousel right to left",
           "event": [
             {
               "listen": "test",
