@@ -5923,7 +5923,7 @@
           "response": []
         },
         {
-          "name": "Carousel - Fast",
+          "name": "Carousel right to left (fast)",
           "event": [
             {
               "listen": "test",
