@@ -2315,7 +2315,7 @@
           "response": []
         },
         {
-          "name": "Photo with border",
+          "name": "Photo with Border",
           "event": [
             {
               "listen": "test",
