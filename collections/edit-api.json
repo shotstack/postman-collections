@@ -3924,7 +3924,7 @@
           "response": []
         },
         {
-          "name": "Japanese",
+          "name": "Japanese text",
           "event": [
             {
               "listen": "test",
