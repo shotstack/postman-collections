@@ -5300,7 +5300,7 @@
           "response": []
         },
         {
-          "name": "Real Estate Walkthrough",
+          "name": "Property tour/walkthrough",
           "event": [
             {
               "listen": "test",
