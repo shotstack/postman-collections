@@ -2830,7 +2830,7 @@
           "response": []
         },
         {
-          "name": "Arrow Transition",
+          "name": "Arrow transition luma matte",
           "event": [
             {
               "listen": "test",
