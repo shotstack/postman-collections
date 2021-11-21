@@ -1135,7 +1135,7 @@
           "response": []
         },
         {
-          "name": "Lighten Filter",
+          "name": "Lighten filter",
           "event": [
             {
               "listen": "test",
