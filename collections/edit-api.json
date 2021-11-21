@@ -1930,7 +1930,7 @@
           "response": []
         },
         {
-          "name": "Custom Fonts Using Merge Variables",
+          "name": "Custom fonts using merge fields",
           "event": [
             {
               "listen": "test",
