@@ -5981,7 +5981,7 @@
           "response": []
         },
         {
-          "name": "Shuffle",
+          "name": "Shuffle transition effect",
           "event": [
             {
               "listen": "test",
