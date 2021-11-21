@@ -1813,7 +1813,7 @@
           "response": []
         },
         {
-          "name": "HTML offset",
+          "name": "HTML offset label",
           "event": [
             {
               "listen": "test",
