@@ -4822,7 +4822,7 @@
           "response": []
         },
         {
-          "name": "Trim Video",
+          "name": "Trim video",
           "event": [
             {
               "listen": "test",
