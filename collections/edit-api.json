@@ -907,7 +907,7 @@
           "response": []
         },
         {
-          "name": "Boost Filter",
+          "name": "Boost filter",
           "event": [
             {
               "listen": "test",
