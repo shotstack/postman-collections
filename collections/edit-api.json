@@ -4706,7 +4706,7 @@
           "response": []
         },
         {
-          "name": "60fps to 30fps Conversion",
+          "name": "30fps output",
           "event": [
             {
               "listen": "test",
