@@ -2772,7 +2772,7 @@
           "response": []
         },
         {
-          "name": "Multiple Luma Matte Transitions",
+          "name": "Multiple luma matte transitions",
           "event": [
             {
               "listen": "test",
