@@ -2315,7 +2315,7 @@
           "response": []
         },
         {
-          "name": "Photo with Border",
+          "name": "Photo with border",
           "event": [
             {
               "listen": "test",
@@ -2525,7 +2525,7 @@
       "name": "Ken Burns",
       "item": [
         {
-          "name": "Ken Burns Effect",
+          "name": "Ken burns slideshow effect",
           "event": [
             {
               "listen": "test",
