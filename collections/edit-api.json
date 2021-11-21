@@ -1192,7 +1192,7 @@
           "response": []
         },
         {
-          "name": "Muted Filter",
+          "name": "Muted filter",
           "event": [
             {
               "listen": "test",
