@@ -1697,64 +1697,6 @@
           "response": []
         },
         {
-          "name": "Box Shadow Flat",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "c77df90d-8e35-436c-b4ce-f3d4637797a1"
-              }
-            }
-          ],
-          "id": "e9fba280-e943-4467-a1ff-893d7aca76ca",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/palmtrees.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"fonts\": [\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/OpenSans-Regular.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<table border='0'><tr><td><p>BOX SHADOW</p></td></tr></table>\",\n                            \"css\": \"table { background-color: #000000; } td { padding-top: 16px; padding-bottom: 16px; } p { color: #FFFFFF; font-size: 34px; font-family: 'Open Sans'; font-weight: bold; margin: 20px; text-align: center; }\",\n                            \"width\": 450,\n                            \"height\": 200\n                        },\n                        \"start\": 1,\n                        \"length\": 6,\n                         \"transition\": {\n                            \"in\": \"slideUpFast\",\n                            \"out\": \"slideDownFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<table border='0'><tr><td><p>BOX SHADOW</p></td></tr></table>\",\n                            \"css\": \"table { background-color: #ffd312; } td { padding-top: 16px; padding-bottom: 16px; } p { color: #ffd312; font-size: 34px; font-family: 'Open Sans'; font-weight: bold; margin: 20px; text-align: center; }\",\n                            \"width\": 450,\n                            \"height\": 200\n                        },\n                        \"start\": 1,\n                        \"length\": 6,\n                        \"offset\": {\n                            \"x\": 0.0075,\n                            \"y\": -0.0065\n                        },\n                        \"transition\": {\n                            \"in\": \"slideUpFast\",\n                            \"out\": \"slideDownFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/table-mountain.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 8,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\",\n        \"aspectRatio\": \"9:16\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Flat box shadow effect using two HTML layers, one on top of each other.\n\n![Flat box example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/efbf103d-29db-4bdd-ac3b-28b5b2f3975f.gif)\n\n[Example Video MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3.mp4\",\n  \"description\": \"Flat box shadow effect using two HTML layers, one on top of each other.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3-poster.jpg\",\n  \"permalink\": \"flat-box-shadow-html\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
           "name": "Text Shadow Blur",
           "event": [
             {
@@ -1809,6 +1751,64 @@
             },
             "url": "https://api.shotstack.io/{{ENV}}/render",
             "description": "Blur text shadow using two HTML assets layered over each other. The bottom asset uses the blut filter. Note: the blur filter is very slow.\n\n![Bur text shadow example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/370066b6-be5f-45bf-b2ae-1b17cce22e58.gif)\n\n[Example Video MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/518d4816-bc4b-4a07-b431-671476fabfbb.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/518d4816-bc4b-4a07-b431-671476fabfbb.mp4\",\n  \"description\": \"Blur text shadow using two HTML assets layered over each other. The bottom asset uses the blut filter. Note: the blur filter is very slow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/518d4816-bc4b-4a07-b431-671476fabfbb-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/518d4816-bc4b-4a07-b431-671476fabfbb-poster.jpg\",\n  \"permalink\": \"html-text-drop-shadow-blur\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Box Shadow Flat",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "c77df90d-8e35-436c-b4ce-f3d4637797a1"
+              }
+            }
+          ],
+          "id": "e9fba280-e943-4467-a1ff-893d7aca76ca",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/palmtrees.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"fonts\": [\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/OpenSans-Regular.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<table border='0'><tr><td><p>BOX SHADOW</p></td></tr></table>\",\n                            \"css\": \"table { background-color: #000000; } td { padding-top: 16px; padding-bottom: 16px; } p { color: #FFFFFF; font-size: 34px; font-family: 'Open Sans'; font-weight: bold; margin: 20px; text-align: center; }\",\n                            \"width\": 450,\n                            \"height\": 200\n                        },\n                        \"start\": 1,\n                        \"length\": 6,\n                         \"transition\": {\n                            \"in\": \"slideUpFast\",\n                            \"out\": \"slideDownFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<table border='0'><tr><td><p>BOX SHADOW</p></td></tr></table>\",\n                            \"css\": \"table { background-color: #ffd312; } td { padding-top: 16px; padding-bottom: 16px; } p { color: #ffd312; font-size: 34px; font-family: 'Open Sans'; font-weight: bold; margin: 20px; text-align: center; }\",\n                            \"width\": 450,\n                            \"height\": 200\n                        },\n                        \"start\": 1,\n                        \"length\": 6,\n                        \"offset\": {\n                            \"x\": 0.0075,\n                            \"y\": -0.0065\n                        },\n                        \"transition\": {\n                            \"in\": \"slideUpFast\",\n                            \"out\": \"slideDownFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/table-mountain.mp4\"\n                        },\n                        \"start\": 0,\n                        \"length\": 8,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\",\n        \"aspectRatio\": \"9:16\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Flat box shadow effect using two HTML layers, one on top of each other.\n\n![Flat box example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/efbf103d-29db-4bdd-ac3b-28b5b2f3975f.gif)\n\n[Example Video MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3.mp4\",\n  \"description\": \"Flat box shadow effect using two HTML layers, one on top of each other.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/bc7f461f-33f2-46d8-b058-19281ca7dff3-poster.jpg\",\n  \"permalink\": \"flat-box-shadow-html\"\n}\n-->"
           },
           "response": []
         },
