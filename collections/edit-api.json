@@ -4496,7 +4496,7 @@
           "response": []
         },
         {
-          "name": "Offset Right",
+          "name": "Right offset",
           "event": [
             {
               "listen": "test",
