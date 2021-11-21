@@ -2627,7 +2627,7 @@
           "response": []
         },
         {
-          "name": "Ken Burns Effect - Fast",
+          "name": "Ken Burns slideshow effect (fast)",
           "event": [
             {
               "listen": "test",
