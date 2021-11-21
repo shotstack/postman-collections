@@ -1249,7 +1249,7 @@
           "response": []
         },
         {
-          "name": "Negative FIlter",
+          "name": "Negative fIlter",
           "event": [
             {
               "listen": "test",
