@@ -2141,7 +2141,7 @@
       "name": "Images",
       "item": [
         {
-          "name": "Hello World Image Demo",
+          "name": "Hello World image",
           "event": [
             {
               "listen": "test",
