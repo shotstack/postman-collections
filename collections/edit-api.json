@@ -3482,7 +3482,7 @@
       "name": "Motion Effects",
       "item": [
         {
-          "name": "Slide Text Effect",
+          "name": "Slide text effect",
           "event": [
             {
               "listen": "test",
