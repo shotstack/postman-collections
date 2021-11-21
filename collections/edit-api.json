@@ -1755,7 +1755,7 @@
           "response": []
         },
         {
-          "name": "Box Shadow Flat",
+          "name": "Flat box shadow",
           "event": [
             {
               "listen": "test",
