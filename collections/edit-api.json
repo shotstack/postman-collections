@@ -3808,7 +3808,7 @@
           "response": []
         },
         {
-          "name": "Arabic",
+          "name": "Arabic text",
           "event": [
             {
               "listen": "test",
