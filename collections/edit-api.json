@@ -6112,7 +6112,8 @@
               "disabled": true
             }
           ]
-        }
+        },
+        "description": "Get the status of a render task."
       },
       "response": []
     },
