@@ -2046,7 +2046,7 @@
           "response": []
         },
         {
-          "name": "Padded Table",
+          "name": "Padded table",
           "event": [
             {
               "listen": "test",
