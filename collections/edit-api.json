@@ -3866,7 +3866,7 @@
           "response": []
         },
         {
-          "name": "Chinese",
+          "name": "Chinese text",
           "event": [
             {
               "listen": "test",
