@@ -4076,7 +4076,7 @@
       "name": "Overlays",
       "item": [
         {
-          "name": "Overlay Transition",
+          "name": "Overlay transition",
           "event": [
             {
               "listen": "test",
