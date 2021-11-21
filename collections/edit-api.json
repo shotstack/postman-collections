@@ -1870,7 +1870,7 @@
           "response": []
         },
         {
-          "name": "Color Matte Backgrounds",
+          "name": "Color mattes (background panels)",
           "event": [
             {
               "listen": "test",
