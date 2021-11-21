@@ -3002,7 +3002,7 @@
           "response": []
         },
         {
-          "name": "CC0 Luma",
+          "name": "Paint transition",
           "event": [
             {
               "listen": "test",
