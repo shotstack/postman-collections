@@ -4916,7 +4916,7 @@
       "name": "Quality",
       "item": [
         {
-          "name": "Low",
+          "name": "Low quality settings",
           "event": [
             {
               "listen": "test",
