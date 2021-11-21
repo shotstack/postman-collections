@@ -3270,7 +3270,7 @@
           "response": []
         },
         {
-          "name": "Multiple Watermarks",
+          "name": "Multiple watermarks",
           "event": [
             {
               "listen": "test",
