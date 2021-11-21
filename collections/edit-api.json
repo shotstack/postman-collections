@@ -849,7 +849,7 @@
       "name": "Filters",
       "item": [
         {
-          "name": "All Filters",
+          "name": "All filters",
           "event": [
             {
               "listen": "test",
