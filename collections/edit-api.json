@@ -2887,7 +2887,7 @@
           "response": []
         },
         {
-          "name": "Arrow 45deg Transition",
+          "name": "Arrow (45deg) luma matte transition",
           "event": [
             {
               "listen": "test",
