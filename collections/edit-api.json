@@ -3982,7 +3982,7 @@
           "response": []
         },
         {
-          "name": "Thai",
+          "name": "Thai text",
           "event": [
             {
               "listen": "test",
