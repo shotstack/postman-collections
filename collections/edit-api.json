@@ -1697,7 +1697,7 @@
           "response": []
         },
         {
-          "name": "Text Shadow Blur",
+          "name": "Text blur drop shadow",
           "event": [
             {
               "listen": "test",
