@@ -1078,7 +1078,7 @@
           "response": []
         },
         {
-          "name": "Greyscale Filter",
+          "name": "Greyscale filter",
           "event": [
             {
               "listen": "test",
