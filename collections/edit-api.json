@@ -697,7 +697,7 @@
           "response": []
         },
         {
-          "name": "Dissolve Tracks - Fast",
+          "name": "Fast dissolve (fade) tracks",
           "event": [
             {
               "listen": "test",
