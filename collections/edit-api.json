@@ -1581,7 +1581,7 @@
           "response": []
         },
         {
-          "name": "Subtitles",
+          "name": "Subtitles using HTML",
           "event": [
             {
               "listen": "test",
