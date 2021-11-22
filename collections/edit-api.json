@@ -3755,12 +3755,12 @@
             {
               "listen": "test",
               "script": {
+                "id": "02265d6e-af7f-4d5a-979c-9f17a4e0c2c2",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
-                "type": "text/javascript",
-                "id": "02265d6e-af7f-4d5a-979c-9f17a4e0c2c2"
+                "type": "text/javascript"
               }
             }
           ],
