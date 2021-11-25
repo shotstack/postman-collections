@@ -3656,7 +3656,7 @@
           "response": []
         },
         {
-          "name": "Slide up/down text effect",
+          "name": "Slide up/down logo text reveal",
           "event": [
             {
               "listen": "test",
