@@ -6153,6 +6153,64 @@
             "description": "A shuffle-like transition that animates between two different clips in a range of rotating directions.\n\n![Shuffle Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/1cefcf89-684f-45b4-b74a-17d00cc1f432.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-poster.jpg\",\n  \"permalink\": \"shuffle-transition\"\n}\n-->"
           },
           "response": []
+        },
+        {
+          "name": "Carousel right to left Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "25226559-0631-451b-ac0a-f4035666c363"
+              }
+            }
+          ],
+          "id": "3d8fdd45-0af1-4de4-a172-df5b214af004",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A carousel-like transition that animates between two different clips from right to left.\n\n![Carousel Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/0f8fc745-7b27-4f08-8150-71770a0605c7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition\"\n}\n-->"
+          },
+          "response": []
         }
       ],
       "id": "5ee5e679-601f-419c-a775-e4c366298181",
