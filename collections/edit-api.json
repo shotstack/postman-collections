@@ -5887,7 +5887,7 @@
           "response": []
         },
         {
-          "name": "Skew",
+          "name": "Skew transformations",
           "event": [
             {
               "listen": "test",
