@@ -4192,7 +4192,7 @@
           "response": []
         },
         {
-          "name": "Overlay transition Copy",
+          "name": "Arrow overlay transition",
           "event": [
             {
               "listen": "test",
