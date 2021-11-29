@@ -6466,20 +6466,6 @@
       "response": []
     },
     {
-      "name": "Probe",
-      "id": "ef14421e-6b56-44e9-ab06-b3d449b35380",
-      "protocolProfileBehavior": {
-        "disableBodyPruning": true
-      },
-      "request": {
-        "method": "GET",
-        "header": [],
-        "url": "https://api.shotstack.io/{{ENV}}/probe/https%3A%2F%2Fgithub.com%2Fshotstack%2Ftest-media%2Fraw%2Fmain%2Fcaptioning%2Fscott-ko.mp4",
-        "description": "Fetch metadata from any media file online.\n\nThe URL must be URL encoded and appended after `/probe`."
-      },
-      "response": []
-    },
-    {
       "name": "Get status Copy",
       "id": "7524efcf-5936-4020-ab17-8310784575a6",
       "protocolProfileBehavior": {
@@ -6522,6 +6508,20 @@
           ]
         },
         "description": "Get the status of a render task."
+      },
+      "response": []
+    },
+    {
+      "name": "Probe",
+      "id": "ef14421e-6b56-44e9-ab06-b3d449b35380",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://api.shotstack.io/{{ENV}}/probe/https%3A%2F%2Fgithub.com%2Fshotstack%2Ftest-media%2Fraw%2Fmain%2Fcaptioning%2Fscott-ko.mp4",
+        "description": "Fetch metadata from any media file online.\n\nThe URL must be URL encoded and appended after `/probe`."
       },
       "response": []
     }
