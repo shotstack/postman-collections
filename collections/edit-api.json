@@ -5713,6 +5713,7 @@
               "script": {
                 "id": "0cf54773-0c2f-41ff-85b1-e50429315331",
                 "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
                 ],
                 "type": "text/javascript"
