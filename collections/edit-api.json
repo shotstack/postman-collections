@@ -6478,6 +6478,52 @@
         "description": "Fetch metadata from any media file online.\n\nThe URL must be URL encoded and appended after `/probe`."
       },
       "response": []
+    },
+    {
+      "name": "Get status Copy",
+      "id": "7524efcf-5936-4020-ab17-8310784575a6",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": {
+            "value": "{{SHOTSTACK_API_KEY}}",
+            "in": "header",
+            "key": "x-api-key"
+          }
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://api.shotstack.io/{{ENV}}/render/{{RENDER_ID}}?timeline=false",
+          "protocol": "https",
+          "host": [
+            "api",
+            "shotstack",
+            "io"
+          ],
+          "path": [
+            "{{ENV}}",
+            "render",
+            "{{RENDER_ID}}"
+          ],
+          "query": [
+            {
+              "key": "timeline",
+              "value": "false"
+            },
+            {
+              "key": "merge",
+              "value": "false",
+              "disabled": true
+            }
+          ]
+        },
+        "description": "Get the status of a render task."
+      },
+      "response": []
     }
   ],
   "auth": {
