@@ -6329,64 +6329,6 @@
           "response": []
         },
         {
-          "name": "Shuffle transition effect",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "64f30f10-60be-4a54-8436-d0bf5fe7d386"
-              }
-            }
-          ],
-          "id": "537e61b7-c4ce-4a46-beae-9d0b7cadfc9d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"SHUFFLE EFFECT\",\n                            \"color\": \"#ffffff\",\n                            \"style\": \"future\",\n                            \"size\": \"small\",\n                            \"position\": \"bottomLeft\",\n                            \"offset\": {\n                                \"x\": 0.3\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards1.jpg\"\n                        },\n                        \"start\": 2,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards3.jpg\"\n                        },\n                        \"start\": 4,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards2.jpg\"\n                        },\n                        \"start\": 6,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards5.jpg\"\n                        },\n                        \"start\": 8,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards4.jpg\"\n                        },\n                        \"start\": 10,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards6.jpg\"\n                        },\n                        \"start\": 12,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards7.jpg\"\n                        },\n                        \"start\": 14,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards8.jpg\"\n                        },\n                        \"start\": 16,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://feeds.soundcloud.com/stream/265742254-unminus-trumpetz.mp3\",\n            \"effect\": \"fadeOut\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A shuffle-like transition that animates between two different clips in a range of rotating directions.\n\n![Shuffle Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/1cefcf89-684f-45b4-b74a-17d00cc1f432.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-poster.jpg\",\n  \"permalink\": \"shuffle-transition\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
           "name": "Reveal left to right Copy",
           "event": [
             {
@@ -6441,6 +6383,64 @@
             },
             "url": "https://api.shotstack.io/{{ENV}}/render",
             "description": "A reveal transition that wipes left to right to show the next photo in the slideshow.\n\n![](https://cdn.shotstack.io/au/v1/msgtwx8iw6/04db0382-41aa-4503-97ce-88002db0aea7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4\",\n  \"description\": \"A reveal transition that wipes left to right to show the next photo in the slideshow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.jpg\",\n  \"permalink\": \"lreveal-transition-left-right\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Shuffle transition effect",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "64f30f10-60be-4a54-8436-d0bf5fe7d386"
+              }
+            }
+          ],
+          "id": "537e61b7-c4ce-4a46-beae-9d0b7cadfc9d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"SHUFFLE EFFECT\",\n                            \"color\": \"#ffffff\",\n                            \"style\": \"future\",\n                            \"size\": \"small\",\n                            \"position\": \"bottomLeft\",\n                            \"offset\": {\n                                \"x\": 0.3\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards1.jpg\"\n                        },\n                        \"start\": 2,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards3.jpg\"\n                        },\n                        \"start\": 4,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards2.jpg\"\n                        },\n                        \"start\": 6,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards5.jpg\"\n                        },\n                        \"start\": 8,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards4.jpg\"\n                        },\n                        \"start\": 10,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards6.jpg\"\n                        },\n                        \"start\": 12,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards7.jpg\"\n                        },\n                        \"start\": 14,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards8.jpg\"\n                        },\n                        \"start\": 16,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://feeds.soundcloud.com/stream/265742254-unminus-trumpetz.mp3\",\n            \"effect\": \"fadeOut\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A shuffle-like transition that animates between two different clips in a range of rotating directions.\n\n![Shuffle Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/1cefcf89-684f-45b4-b74a-17d00cc1f432.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-poster.jpg\",\n  \"permalink\": \"shuffle-transition\"\n}\n-->"
           },
           "response": []
         }
