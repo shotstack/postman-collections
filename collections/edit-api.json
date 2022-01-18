@@ -6594,12 +6594,6 @@
       ]
     },
     {
-      "name": "GIF",
-      "item": [],
-      "id": "56aeba5e-74f7-4cc6-9199-ce42275586c0",
-      "description": "Create animated GIFs at scale."
-    },
-    {
       "name": "Get status",
       "id": "404cd995-1273-4f58-98eb-e205692354b2",
       "protocolProfileBehavior": {
