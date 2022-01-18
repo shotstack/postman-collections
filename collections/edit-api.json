@@ -6443,7 +6443,43 @@
             "description": "A shuffle-like transition that animates between two different clips in a range of rotating directions.\n\n![Shuffle Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/1cefcf89-684f-45b4-b74a-17d00cc1f432.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-poster.jpg\",\n  \"permalink\": \"shuffle-transition\"\n}\n-->"
           },
           "response": []
+        }
+      ],
+      "id": "5ee5e679-601f-419c-a775-e4c366298181",
+      "description": "Transition from one clip to another using built in animations and effects.",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{SHOTSTACK_API_KEY}}",
+          "key": "x-api-key"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "c664084f-5222-4606-898c-2a5255cfb936"
+          }
         },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "677ca131-fa44-4ddc-8fbf-78f5f896888b"
+          }
+        }
+      ]
+    },
+    {
+      "name": "GIF",
+      "item": [
         {
           "name": "Carousel right to left Copy",
           "event": [
@@ -6503,41 +6539,6 @@
           "response": []
         }
       ],
-      "id": "5ee5e679-601f-419c-a775-e4c366298181",
-      "description": "Transition from one clip to another using built in animations and effects.",
-      "auth": {
-        "type": "apikey",
-        "apikey": {
-          "value": "{{SHOTSTACK_API_KEY}}",
-          "key": "x-api-key"
-        }
-      },
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "c664084f-5222-4606-898c-2a5255cfb936"
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "677ca131-fa44-4ddc-8fbf-78f5f896888b"
-          }
-        }
-      ]
-    },
-    {
-      "name": "GIF",
-      "item": [],
       "id": "56aeba5e-74f7-4cc6-9199-ce42275586c0"
     },
     {
