@@ -1431,7 +1431,7 @@
           "response": []
         },
         {
-          "name": "Hello World Animated GIF",
+          "name": "Hello World animated GIF",
           "event": [
             {
               "listen": "test",
