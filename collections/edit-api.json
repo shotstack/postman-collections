@@ -6387,7 +6387,7 @@
           "response": []
         },
         {
-          "name": "Reveal left to right Copy",
+          "name": "Reveal right to left",
           "event": [
             {
               "listen": "test",
