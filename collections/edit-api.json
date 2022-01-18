@@ -6481,7 +6481,7 @@
       "name": "GIF",
       "item": [
         {
-          "name": "Carousel right to left Copy",
+          "name": "Hello World Animated GIF",
           "event": [
             {
               "listen": "test",
