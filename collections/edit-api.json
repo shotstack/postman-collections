@@ -6387,12 +6387,12 @@
           "response": []
         },
         {
-          "name": "Reveal left to right",
+          "name": "Reveal left to right Copy",
           "event": [
             {
               "listen": "test",
               "script": {
-                "id": "25226559-0631-451b-ac0a-f4035666c363",
+                "id": "e4ea89c3-b3b3-4f32-9806-5aeb667aefdd",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
@@ -6401,7 +6401,7 @@
               }
             }
           ],
-          "id": "3d8fdd45-0af1-4de4-a172-df5b214af004",
+          "id": "0d67a3ff-a09a-4bcb-9785-0845cae638c6",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -6445,12 +6445,12 @@
           "response": []
         },
         {
-          "name": "Reveal left to right Copy",
+          "name": "Reveal left to right",
           "event": [
             {
               "listen": "test",
               "script": {
-                "id": "e4ea89c3-b3b3-4f32-9806-5aeb667aefdd",
+                "id": "25226559-0631-451b-ac0a-f4035666c363",
                 "exec": [
                   "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
                   ""
@@ -6459,7 +6459,7 @@
               }
             }
           ],
-          "id": "0d67a3ff-a09a-4bcb-9785-0845cae638c6",
+          "id": "3d8fdd45-0af1-4de4-a172-df5b214af004",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
