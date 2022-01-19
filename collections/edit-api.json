@@ -6387,64 +6387,6 @@
           "response": []
         },
         {
-          "name": "Reveal left to right Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "e4ea89c3-b3b3-4f32-9806-5aeb667aefdd",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "0d67a3ff-a09a-4bcb-9785-0845cae638c6",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"zoomIn\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A reveal transition that wipes left to right to show the next photo in the slideshow.\n\n![](https://cdn.shotstack.io/au/v1/msgtwx8iw6/04db0382-41aa-4503-97ce-88002db0aea7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4\",\n  \"description\": \"A reveal transition that wipes left to right to show the next photo in the slideshow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.jpg\",\n  \"permalink\": \"reveal-transition-left-right\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
           "name": "Reveal left to right",
           "event": [
             {
