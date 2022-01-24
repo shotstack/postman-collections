@@ -6000,600 +6000,6 @@
       "description": "Video editing themes for different industries and use cases."
     },
     {
-      "name": "Transforms",
-      "item": [
-        {
-          "name": "Rotate transformations",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "2a3d19c2-3d48-4f0e-9c70-69c915536367",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "3f757def-6198-48a3-8e28-90bffb721baf",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 45\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 2.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 135\n                            }\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 90\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 7.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 180\n                            }\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A rotate transformation that allows you to rotate assets.\n\n![Rotate transformation video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/a9981062-781c-45c8-9a0c-17f64cb5720c.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384.mp4\",\n  \"description\": \"A rotate transformation that allows you to flip your assets.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384-poster.jpg\",\n  \"permalink\": \"rotate-transformation\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Flip transformations",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "0026a605-8691-4824-8b76-a7faa5edf1ec",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "f91a2f80-9733-49db-9a87-c11b9739fb42",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"vertical\": true\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 2.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"horizontal\": true\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"horizontal\": true,\n                                \"vertical\": true\n                            }\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 7.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"horizontal\": true\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 10,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"vertical\": true\n                            }\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A flip transformation that allows you to flip assets.\n\n![Flip transformation video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/5a93358d-1ae3-4888-849f-f26b4b87cb7d.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc.mp4\",\n  \"description\": \"A flip transformation that allows you to flip your assets.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc-poster.jpg\",\n  \"permalink\": \"flip-transformation\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Skew transformations",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "32c70e2f-b6c1-4450-a527-56710245f2a7",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "e4018518-008e-4f78-a062-4b1e1406311d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 2.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": -0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"y\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 7.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"y\": -0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 10,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25,\n                                \"y\": 0.25\n                            }\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 12.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": -0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 15,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"y\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 17.5,\n                        \"length\": 2.5,\n                        \"scale\": 0.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25,\n                                \"y\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 20,\n                        \"length\": 2.5,\n                        \"scale\": 0.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25,\n                                \"y\": 0.25\n                            }\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A skew transformation that allows you to skew assets.\n\n![Skew transformation video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/3bd2866f-b171-4da9-990d-c3096a927985.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe.mp4\",\n  \"description\": \"A skew transformation that allows you to skew your assets.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe-poster.jpg\",\n  \"permalink\": \"skew-transformation\"\n}\n-->"
-          },
-          "response": []
-        }
-      ],
-      "id": "6c47c7a6-8268-4fc5-81e8-72766ebffede",
-      "description": "Modify clips using rotate, skew and transform.",
-      "auth": {
-        "type": "apikey",
-        "apikey": {
-          "value": "{{SHOTSTACK_API_KEY}}",
-          "key": "x-api-key"
-        }
-      },
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "id": "9a889928-4e6e-4f96-8563-db8b07df311b",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "id": "206e70c1-76be-41af-a269-2a9a58bc1cba",
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ]
-          }
-        }
-      ]
-    },
-    {
-      "name": "Transitions",
-      "item": [
-        {
-          "name": "Carousel right to left",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "c9d8cd66-7574-423f-9957-e1544ebdc05f",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "a0e8345d-85da-4302-80c3-66774febbdd7",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A carousel-like transition that animates between two different clips from right to left.\n\n![Carousel Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/0f8fc745-7b27-4f08-8150-71770a0605c7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Carousel right to left (slow)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "96a910a7-37e6-4dca-8945-df42324a0872",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "eeb73a21-16e7-4bea-824b-e5e902bdd2ed",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A slow carousel-like transition that animates between two different clips from right to left.\n\n![Carousel transition slow example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/f04f6fd0-e73e-4951-80d9-46c03b4b5482.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/15cf7eab-05d9-45a5-a338-699d350e58e4.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/56300ac8-5420-41da-8c5e-cbc811c77d84.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition-slow\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Carousel right to left (fast)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "98841995-a9cb-4d0f-820c-9b3110e34579",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "8966b9cc-1e62-4c9a-880d-727d9d6c3895",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A fast carousel-like transition that animates between two different clips from right to left.\n\n![Carousel Transition Fast](https://cdn.shotstack.io/au/v1/msgtwx8iw6/65101626-bd92-4380-be06-c9831da28844.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/f46ba480-fe4e-4e4a-8fa4-0a3bbeae6d29.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/f46ba480-fe4e-4e4a-8fa4-0a3bbeae6d29.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition-fast\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Reveal left to right",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "25226559-0631-451b-ac0a-f4035666c363",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "3d8fdd45-0af1-4de4-a172-df5b214af004",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"zoomIn\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A reveal transition that wipes left to right to show the next photo in the slideshow.\n\n![](https://cdn.shotstack.io/au/v1/msgtwx8iw6/04db0382-41aa-4503-97ce-88002db0aea7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4\",\n  \"description\": \"A reveal transition that wipes left to right to show the next photo in the slideshow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.jpg\",\n  \"permalink\": \"reveal-transition-left-right\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Reveal right to left",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "d17da394-db4f-4d6e-9832-cdc757d493f0",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "3dadd936-289e-4a38-b881-3996bdb64469",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 2,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 4,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 6,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 8,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 10,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\"\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A reveal transition that wipes right to left to show the next photo in the slideshow.\n\n![](https://cdn.shotstack.io/au/v1/msgtwx8iw6/00dc4c72-b8c7-4b06-8bfe-eeedfda32f95.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567.mp4\",\n  \"description\": \"A reveal transition that wipes left to right to show the next photo in the slideshow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567-poster.jpg\",\n  \"permalink\": \"reveal-transition-right-left\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Shuffle transition effect",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "64f30f10-60be-4a54-8436-d0bf5fe7d386"
-              }
-            }
-          ],
-          "id": "537e61b7-c4ce-4a46-beae-9d0b7cadfc9d",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"SHUFFLE EFFECT\",\n                            \"color\": \"#ffffff\",\n                            \"style\": \"future\",\n                            \"size\": \"small\",\n                            \"position\": \"bottomLeft\",\n                            \"offset\": {\n                                \"x\": 0.3\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards1.jpg\"\n                        },\n                        \"start\": 2,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards3.jpg\"\n                        },\n                        \"start\": 4,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards2.jpg\"\n                        },\n                        \"start\": 6,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards5.jpg\"\n                        },\n                        \"start\": 8,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards4.jpg\"\n                        },\n                        \"start\": 10,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards6.jpg\"\n                        },\n                        \"start\": 12,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards7.jpg\"\n                        },\n                        \"start\": 14,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards8.jpg\"\n                        },\n                        \"start\": 16,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://feeds.soundcloud.com/stream/265742254-unminus-trumpetz.mp3\",\n            \"effect\": \"fadeOut\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A shuffle-like transition that animates between two different clips in a range of rotating directions.\n\n![Shuffle Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/1cefcf89-684f-45b4-b74a-17d00cc1f432.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-poster.jpg\",\n  \"permalink\": \"shuffle-transition\"\n}\n-->"
-          },
-          "response": []
-        }
-      ],
-      "id": "5ee5e679-601f-419c-a775-e4c366298181",
-      "description": "Transition from one clip to another using built in animations and effects.",
-      "auth": {
-        "type": "apikey",
-        "apikey": {
-          "value": "{{SHOTSTACK_API_KEY}}",
-          "key": "x-api-key"
-        }
-      },
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "c664084f-5222-4606-898c-2a5255cfb936"
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "677ca131-fa44-4ddc-8fbf-78f5f896888b"
-          }
-        }
-      ]
-    },
-    {
       "name": "Templates Copy",
       "item": [
         {
@@ -7295,6 +6701,600 @@
       ],
       "id": "6e7838ab-9d66-47af-aa6c-ab3697ef7a71",
       "description": "Video editing themes for different industries and use cases."
+    },
+    {
+      "name": "Transforms",
+      "item": [
+        {
+          "name": "Rotate transformations",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "2a3d19c2-3d48-4f0e-9c70-69c915536367",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "3f757def-6198-48a3-8e28-90bffb721baf",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 45\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 2.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 135\n                            }\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 90\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 7.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"rotate\": {\n                                \"angle\": 180\n                            }\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A rotate transformation that allows you to rotate assets.\n\n![Rotate transformation video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/a9981062-781c-45c8-9a0c-17f64cb5720c.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384.mp4\",\n  \"description\": \"A rotate transformation that allows you to flip your assets.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/5a9cc8c7-db02-4af6-b37a-3035e1d24384-poster.jpg\",\n  \"permalink\": \"rotate-transformation\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Flip transformations",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "0026a605-8691-4824-8b76-a7faa5edf1ec",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "f91a2f80-9733-49db-9a87-c11b9739fb42",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"vertical\": true\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 2.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"horizontal\": true\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"horizontal\": true,\n                                \"vertical\": true\n                            }\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 7.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"horizontal\": true\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 10,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"flip\": {\n                                \"vertical\": true\n                            }\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A flip transformation that allows you to flip assets.\n\n![Flip transformation video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/5a93358d-1ae3-4888-849f-f26b4b87cb7d.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc.mp4\",\n  \"description\": \"A flip transformation that allows you to flip your assets.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/a47911f9-8382-4fcc-afc8-78dcaf63c8cc-poster.jpg\",\n  \"permalink\": \"flip-transformation\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Skew transformations",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "32c70e2f-b6c1-4450-a527-56710245f2a7",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "e4018518-008e-4f78-a062-4b1e1406311d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 2.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": -0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"y\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 7.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"y\": -0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"chunk\",\n                            \"size\": \"large\"\n                        },\n                        \"start\": 10,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25,\n                                \"y\": 0.25\n                            }\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 12.5,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": -0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 15,\n                        \"length\": 2.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"y\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 17.5,\n                        \"length\": 2.5,\n                        \"scale\": 0.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25,\n                                \"y\": 0.25\n                            }\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 20,\n                        \"length\": 2.5,\n                        \"scale\": 0.5,\n                        \"transform\": {\n                            \"skew\": {\n                                \"x\": 0.25,\n                                \"y\": 0.25\n                            }\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A skew transformation that allows you to skew assets.\n\n![Skew transformation video example](https://cdn.shotstack.io/au/v1/gazk9hycb0/3bd2866f-b171-4da9-990d-c3096a927985.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe.mp4\",\n  \"description\": \"A skew transformation that allows you to skew your assets.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/fec78a20-f3a8-41c2-953c-3d86098b6fbe-poster.jpg\",\n  \"permalink\": \"skew-transformation\"\n}\n-->"
+          },
+          "response": []
+        }
+      ],
+      "id": "6c47c7a6-8268-4fc5-81e8-72766ebffede",
+      "description": "Modify clips using rotate, skew and transform.",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{SHOTSTACK_API_KEY}}",
+          "key": "x-api-key"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "id": "9a889928-4e6e-4f96-8563-db8b07df311b",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "id": "206e70c1-76be-41af-a269-2a9a58bc1cba",
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Transitions",
+      "item": [
+        {
+          "name": "Carousel right to left",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "c9d8cd66-7574-423f-9957-e1544ebdc05f",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "a0e8345d-85da-4302-80c3-66774febbdd7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\",\n                            \"out\": \"carouselLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9.4,\n                        \"length\": 2.6,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeft\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A carousel-like transition that animates between two different clips from right to left.\n\n![Carousel Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/0f8fc745-7b27-4f08-8150-71770a0605c7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Carousel right to left (slow)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "96a910a7-37e6-4dca-8945-df42324a0872",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "eeb73a21-16e7-4bea-824b-e5e902bdd2ed",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\",\n                            \"out\": \"carouselLeftSlow\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9,\n                        \"length\": 3.2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftSlow\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A slow carousel-like transition that animates between two different clips from right to left.\n\n![Carousel transition slow example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/f04f6fd0-e73e-4951-80d9-46c03b4b5482.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/15cf7eab-05d9-45a5-a338-699d350e58e4.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/56300ac8-5420-41da-8c5e-cbc811c77d84.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition-slow\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Carousel right to left (fast)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "98841995-a9cb-4d0f-820c-9b3110e34579",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "8966b9cc-1e62-4c9a-880d-727d9d6c3895",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\",\n                            \"out\": \"carouselLeftFast\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9.6,\n                        \"length\": 2.4,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"in\": \"carouselLeftFast\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A fast carousel-like transition that animates between two different clips from right to left.\n\n![Carousel Transition Fast](https://cdn.shotstack.io/au/v1/msgtwx8iw6/65101626-bd92-4380-be06-c9831da28844.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/f46ba480-fe4e-4e4a-8fa4-0a3bbeae6d29.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/f46ba480-fe4e-4e4a-8fa4-0a3bbeae6d29.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/240c0803-b5bb-4f48-9e3f-168300333828-poster.jpg\",\n  \"permalink\": \"carousel-transition-fast\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Reveal left to right",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "25226559-0631-451b-ac0a-f4035666c363",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "3d8fdd45-0af1-4de4-a172-df5b214af004",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 2,\n                        \"effect\": \"zoomIn\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 1,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 3,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 5,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 7,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 9,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"reveal\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A reveal transition that wipes left to right to show the next photo in the slideshow.\n\n![](https://cdn.shotstack.io/au/v1/msgtwx8iw6/04db0382-41aa-4503-97ce-88002db0aea7.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.mp4\",\n  \"description\": \"A reveal transition that wipes left to right to show the next photo in the slideshow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b364720c-fa8c-491f-9bc8-d1b8eaba26cb.jpg\",\n  \"permalink\": \"reveal-transition-left-right\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Reveal right to left",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "d17da394-db4f-4d6e-9832-cdc757d493f0",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "3dadd936-289e-4a38-b881-3996bdb64469",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy1.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy2.jpg\"\n                        },\n                        \"start\": 2,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy3.jpg\"\n                        },\n                        \"start\": 4,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy4.jpg\"\n                        },\n                        \"start\": 6,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy5.jpg\"\n                        },\n                        \"start\": 8,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"reveal\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/happy6.jpg\"\n                        },\n                        \"start\": 10,\n                        \"length\": 3,\n                        \"effect\": \"zoomIn\"\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/happy.mp3\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A reveal transition that wipes right to left to show the next photo in the slideshow.\n\n![](https://cdn.shotstack.io/au/v1/msgtwx8iw6/00dc4c72-b8c7-4b06-8bfe-eeedfda32f95.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567.mp4\",\n  \"description\": \"A reveal transition that wipes left to right to show the next photo in the slideshow.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1f40d302-d9e7-4737-812e-e3c5a5931567-poster.jpg\",\n  \"permalink\": \"reveal-transition-right-left\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Shuffle transition effect",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "64f30f10-60be-4a54-8436-d0bf5fe7d386"
+              }
+            }
+          ],
+          "id": "537e61b7-c4ce-4a46-beae-9d0b7cadfc9d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"SHUFFLE EFFECT\",\n                            \"color\": \"#ffffff\",\n                            \"style\": \"future\",\n                            \"size\": \"small\",\n                            \"position\": \"bottomLeft\",\n                            \"offset\": {\n                                \"x\": 0.3\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards1.jpg\"\n                        },\n                        \"start\": 2,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards3.jpg\"\n                        },\n                        \"start\": 4,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards2.jpg\"\n                        },\n                        \"start\": 6,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards5.jpg\"\n                        },\n                        \"start\": 8,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards4.jpg\"\n                        },\n                        \"start\": 10,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards6.jpg\"\n                        },\n                        \"start\": 12,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards7.jpg\"\n                        },\n                        \"start\": 14,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopLeft\",\n                            \"out\": \"shuffleTopLeft\"\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/cards8.jpg\"\n                        },\n                        \"start\": 16,\n                        \"length\": 3,\n                        \"transition\": {\n                            \"in\": \"shuffleTopRight\",\n                            \"out\": \"shuffleTopRight\"\n                        }\n                    }\n                ]\n            }\n        ],\n        \"soundtrack\": {\n            \"src\": \"https://feeds.soundcloud.com/stream/265742254-unminus-trumpetz.mp3\",\n            \"effect\": \"fadeOut\"\n        }\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A shuffle-like transition that animates between two different clips in a range of rotating directions.\n\n![Shuffle Transition](https://cdn.shotstack.io/au/v1/gazk9hycb0/1cefcf89-684f-45b4-b74a-17d00cc1f432.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/gazk9hycb0/f93be86d-77f9-495f-9136-7afaecb3fc02.mp4\",\n  \"description\": \"A carousel-like transition that animates between two different clips from right to left.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4bfdb3e6-d482-4677-b8fd-02e167e88197-poster.jpg\",\n  \"permalink\": \"shuffle-transition\"\n}\n-->"
+          },
+          "response": []
+        }
+      ],
+      "id": "5ee5e679-601f-419c-a775-e4c366298181",
+      "description": "Transition from one clip to another using built in animations and effects.",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{SHOTSTACK_API_KEY}}",
+          "key": "x-api-key"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "c664084f-5222-4606-898c-2a5255cfb936"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "677ca131-fa44-4ddc-8fbf-78f5f896888b"
+          }
+        }
+      ]
     },
     {
       "name": "Get status",
