@@ -2689,390 +2689,6 @@
       ]
     },
     {
-      "name": "Images",
-      "item": [
-        {
-          "name": "Hello World image",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "bbad670a-a733-4ec4-a8c3-60553204e498"
-              }
-            }
-          ],
-          "id": "0452bb49-119c-41f9-8258-4cb981f6afd9",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": 0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"World\",\n                            \"style\": \"future\",\n                            \"size\": \"medium\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": -0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/earth.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.4\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"size\": {\n            \"width\": 850,\n            \"height\": 500\n        }\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A hello world image example with offset photo and title text.\n\n![Hello world image preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696.jpg\",\n  \"description\": \"A hello world image example with offset photo and title text.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696-thumb.jpg\",\n  \"permalink\": \"hello-world-image\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Hello World Image Instagram (1:1)",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "7412b3c7-d55d-4519-9da6-bea3caeb7f7c"
-              }
-            }
-          ],
-          "id": "702fcfdd-1a7c-4d8f-80ef-7813b5db3aa8",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": 0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"World\",\n                            \"style\": \"future\",\n                            \"size\": \"medium\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": -0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/earth.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.4\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"resolution\": \"hd\",\n        \"aspectRatio\": \"1:1\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A hello world image example with offset photo and title text. Uses a square aspect ratio for social networks such as Instagram.\n\n![Hello world image preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f.jpg\",\n  \"description\": \"A hello world image example with offset photo and title text. Uses a square aspect ratio for social networks such as Instagram.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f-thumb.jpg\",\n  \"permalink\": \"hello-world-image-square-instagram\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Video frame grab",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "37ae7d69-8e3e-4065-973e-428e959db7c3",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "c248f689-1892-4489-96c5-266fada88654",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "type": "text"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"x-small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        },\n                        \"effect\": \"zoomIn\",\n                        \"effectOptions\": {\n                            \"scale\": 1.1\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"effect\": \"zoomIn\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 5,\n                        \"length\": 5\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"resolution\": \"sd\",\n        \"range\": {\n            \"start\": 6,\n            \"length\": 1\n        }\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Grab a frame from any video edit. Uses the range parameter to set the frame to be grabbed.\n\n![Frame grab preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e.jpg\",\n  \"description\": \"Grab a frame from any video edit. Uses the range parameter to set the frame to be grabbed.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e-thumb.jpg\",\n  \"permalink\": \"frame-grab\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Photo with border",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "9d283cfe-a5dc-46e3-abac-4b957cff0633"
-              }
-            }
-          ],
-          "id": "5f3854aa-e3e0-4f08-8e32-4d41db09182b",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/borders/80s-acid-pink-square.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/dolphins.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"quality\": \"high\",\n        \"size\": {\n            \"width\": 1000,\n            \"height\": 1000\n        }\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Add a border to an image using a transparent png and a jpg photo.\n\n![Border image example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a.jpg\",\n  \"description\": \"Add a border to an image using a transparent png and a jpg photo.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a-poster.jpg\",\n  \"permalink\": \"image-photo-border\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Photo with border & text",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "f1d2de28-2ac6-474b-9f2b-2e5fb4542e1c",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "03437e2e-38a7-4eef-9b23-cb9c068011c5",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"fonts\": [\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/LilitaOne-Regular.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>Shotstack enables businesses to massively scale their video production capabilities using code.</p>\",\n                            \"css\": \"p { font-family: \\\"Lilita One\\\"; color: #ffd300; font-size: 64px; text-align: center; }\",\n                            \"width\": 600,\n                            \"height\": 600,\n                            \"background\": \"transparent\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>Shotstack enables businesses to massively scale their video production capabilities using code.</p>\",\n                            \"css\": \"p { font-family: \\\"Lilita One\\\"; color: #e90ec0; font-size: 64px; text-align: center; }\",\n                            \"width\": 600,\n                            \"height\": 600,\n                            \"background\": \"transparent\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.004,\n                            \"y\": -0.004\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/borders/80s-acid-pink-square.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/earth.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"quality\": \"high\",\n        \"size\": {\n            \"width\": 1000,\n            \"height\": 1000\n        }\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Photo with border and drop shadow style text in retro colors.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763-thumb.jpg)\n\n[Example Image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763.jpg\",\n  \"description\": \"Photo with border and drop shadow style text in retro colors.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763-thumb.jpg\",\n  \"permalink\": \"image-border-drop-shadow-text\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Leaderboard banner ad",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript",
-                "id": "cf57c098-2771-4e2d-810d-939d1e92bbf6"
-              }
-            }
-          ],
-          "id": "b585676a-ab7c-4786-81bb-b6cb96679016",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"background\": \"#ffffff\",\n        \"fonts\": [\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/NunitoSans-Light.ttf\"\n            },\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/NunitoSans-SemiBold.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>Generate <u>banners</u> using code</p>\",\n                            \"css\": \"p { font-family: 'Nunito Bold SemiSans'; font-size: 20px; color: #313131; text-align: center;  } u { color: #25d3d0 }\",\n                            \"width\": 300,\n                            \"height\": 80\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.042\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/branding/logo.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"scale\": 0.5,\n                        \"position\": \"left\",\n                        \"offset\": {\n                            \"x\": 0.03\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/banners/try-now-button.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"position\": \"right\",\n                        \"offset\": {\n                            \"x\": -0.03\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/banners/banner-728x90.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"quality\": \"high\",\n        \"size\": {\n            \"width\": 728,\n            \"height\": 90\n        }\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Leaderboard size banner ad image with text, logo and CTA.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/17aa1afb-4aac-4710-bcd5-937c82b99a96-thumb.jpg)\n\n[Example Image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/94824246-12b8-4373-828f-8ad60a319a8b.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/94824246-12b8-4373-828f-8ad60a319a8b.jpg\",\n  \"description\": \"Leaderboard size banner ad image with text, logo and CTA.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/17aa1afb-4aac-4710-bcd5-937c82b99a96-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/94824246-12b8-4373-828f-8ad60a319a8b.jpg\",\n  \"permalink\": \"leaderboard-banner-ad\"\n}\n-->"
-          },
-          "response": []
-        }
-      ],
-      "id": "558ecebb-0790-4a08-940d-5f060a499d5c",
-      "description": "Image layouts, designs and frame grabs.",
-      "auth": {
-        "type": "apikey",
-        "apikey": {
-          "value": "{{SHOTSTACK_API_KEY}}",
-          "key": "x-api-key"
-        }
-      },
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "cdf5529e-627c-4a70-844c-9a470509342e"
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "05c415fe-f62a-487e-9429-064f800b7892"
-          }
-        }
-      ]
-    },
-    {
       "name": "Ken Burns",
       "item": [
         {
@@ -6379,6 +5995,390 @@
               ""
             ],
             "id": "677ca131-fa44-4ddc-8fbf-78f5f896888b"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Images",
+      "item": [
+        {
+          "name": "Hello World image",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "bbad670a-a733-4ec4-a8c3-60553204e498"
+              }
+            }
+          ],
+          "id": "0452bb49-119c-41f9-8258-4cb981f6afd9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": 0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"World\",\n                            \"style\": \"future\",\n                            \"size\": \"medium\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": -0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/earth.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.4\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"size\": {\n            \"width\": 850,\n            \"height\": 500\n        }\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A hello world image example with offset photo and title text.\n\n![Hello world image preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696.jpg\",\n  \"description\": \"A hello world image example with offset photo and title text.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/88dd7d64-022a-4232-8149-33c8d1c3b696-thumb.jpg\",\n  \"permalink\": \"hello-world-image\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Hello World Image Instagram (1:1)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "7412b3c7-d55d-4519-9da6-bea3caeb7f7c"
+              }
+            }
+          ],
+          "id": "702fcfdd-1a7c-4d8f-80ef-7813b5db3aa8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello\",\n                            \"style\": \"future\",\n                            \"size\": \"x-small\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": 0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"World\",\n                            \"style\": \"future\",\n                            \"size\": \"medium\",\n                            \"position\": \"left\",\n                            \"offset\": {\n                                \"x\": 0.3,\n                                \"y\": -0.1\n                            }\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/earth.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.4\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"resolution\": \"hd\",\n        \"aspectRatio\": \"1:1\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A hello world image example with offset photo and title text. Uses a square aspect ratio for social networks such as Instagram.\n\n![Hello world image preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f.jpg\",\n  \"description\": \"A hello world image example with offset photo and title text. Uses a square aspect ratio for social networks such as Instagram.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/02773543-a0b2-4b27-a43d-9404cf71ae3f-thumb.jpg\",\n  \"permalink\": \"hello-world-image-square-instagram\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Video frame grab",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "37ae7d69-8e3e-4065-973e-428e959db7c3",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "c248f689-1892-4489-96c5-266fada88654",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n        },\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"minimal\",\n                            \"size\": \"x-small\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        },\n                        \"effect\": \"zoomIn\",\n                        \"effectOptions\": {\n                            \"scale\": 1.1\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/wave-barrel.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"effect\": \"zoomIn\"\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://s3-ap-southeast-2.amazonaws.com/shotstack-assets/footage/cat.hd.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 5,\n                        \"length\": 5\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"resolution\": \"sd\",\n        \"range\": {\n            \"start\": 6,\n            \"length\": 1\n        }\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Grab a frame from any video edit. Uses the range parameter to set the frame to be grabbed.\n\n![Frame grab preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e.jpg\",\n  \"description\": \"Grab a frame from any video edit. Uses the range parameter to set the frame to be grabbed.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/cbddc728-024e-404b-824f-20f81e7c348e-thumb.jpg\",\n  \"permalink\": \"frame-grab\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Photo with border",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "9d283cfe-a5dc-46e3-abac-4b957cff0633"
+              }
+            }
+          ],
+          "id": "5f3854aa-e3e0-4f08-8e32-4d41db09182b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/borders/80s-acid-pink-square.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/images/dolphins.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"quality\": \"high\",\n        \"size\": {\n            \"width\": 1000,\n            \"height\": 1000\n        }\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Add a border to an image using a transparent png and a jpg photo.\n\n![Border image example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a-thumb.jpg)\n\n[Example image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a.jpg\",\n  \"description\": \"Add a border to an image using a transparent png and a jpg photo.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/dd1142b4-900b-472d-b632-8d0814bbe69a-poster.jpg\",\n  \"permalink\": \"image-photo-border\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Photo with border & text",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "f1d2de28-2ac6-474b-9f2b-2e5fb4542e1c",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "03437e2e-38a7-4eef-9b23-cb9c068011c5",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#000000\",\n        \"fonts\": [\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/LilitaOne-Regular.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>Shotstack enables businesses to massively scale their video production capabilities using code.</p>\",\n                            \"css\": \"p { font-family: \\\"Lilita One\\\"; color: #ffd300; font-size: 64px; text-align: center; }\",\n                            \"width\": 600,\n                            \"height\": 600,\n                            \"background\": \"transparent\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>Shotstack enables businesses to massively scale their video production capabilities using code.</p>\",\n                            \"css\": \"p { font-family: \\\"Lilita One\\\"; color: #e90ec0; font-size: 64px; text-align: center; }\",\n                            \"width\": 600,\n                            \"height\": 600,\n                            \"background\": \"transparent\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.004,\n                            \"y\": -0.004\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/borders/80s-acid-pink-square.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/images/earth.jpg\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"quality\": \"high\",\n        \"size\": {\n            \"width\": 1000,\n            \"height\": 1000\n        }\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Photo with border and drop shadow style text in retro colors.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763-thumb.jpg)\n\n[Example Image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763.jpg\",\n  \"description\": \"Photo with border and drop shadow style text in retro colors.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/4ee2119d-f616-43b5-92ab-ec9872db0763-thumb.jpg\",\n  \"permalink\": \"image-border-drop-shadow-text\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Leaderboard banner ad",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript",
+                "id": "cf57c098-2771-4e2d-810d-939d1e92bbf6"
+              }
+            }
+          ],
+          "id": "b585676a-ab7c-4786-81bb-b6cb96679016",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"background\": \"#ffffff\",\n        \"fonts\": [\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/NunitoSans-Light.ttf\"\n            },\n            {\n                \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/fonts/NunitoSans-SemiBold.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"html\",\n                            \"html\": \"<p>Generate <u>banners</u> using code</p>\",\n                            \"css\": \"p { font-family: 'Nunito Bold SemiSans'; font-size: 20px; color: #313131; text-align: center;  } u { color: #25d3d0 }\",\n                            \"width\": 300,\n                            \"height\": 80\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"offset\": {\n                            \"x\": 0.042\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/branding/logo.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"scale\": 0.5,\n                        \"position\": \"left\",\n                        \"offset\": {\n                            \"x\": 0.03\n                        }\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/banners/try-now-button.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1,\n                        \"fit\": \"none\",\n                        \"position\": \"right\",\n                        \"offset\": {\n                            \"x\": -0.03\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/banners/banner-728x90.png\"\n                        },\n                        \"start\": 0,\n                        \"length\": 1\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"jpg\",\n        \"quality\": \"high\",\n        \"size\": {\n            \"width\": 728,\n            \"height\": 90\n        }\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Leaderboard size banner ad image with text, logo and CTA.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/17aa1afb-4aac-4710-bcd5-937c82b99a96-thumb.jpg)\n\n[Example Image JPG](https://cdn.shotstack.io/au/v1/msgtwx8iw6/94824246-12b8-4373-828f-8ad60a319a8b.jpg)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/94824246-12b8-4373-828f-8ad60a319a8b.jpg\",\n  \"description\": \"Leaderboard size banner ad image with text, logo and CTA.\",\n  \"type\": \"image\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/17aa1afb-4aac-4710-bcd5-937c82b99a96-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/94824246-12b8-4373-828f-8ad60a319a8b.jpg\",\n  \"permalink\": \"leaderboard-banner-ad\"\n}\n-->"
+          },
+          "response": []
+        }
+      ],
+      "id": "558ecebb-0790-4a08-940d-5f060a499d5c",
+      "description": "Image layouts, designs and frame grabs.",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{SHOTSTACK_API_KEY}}",
+          "key": "x-api-key"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "cdf5529e-627c-4a70-844c-9a470509342e"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "05c415fe-f62a-487e-9429-064f800b7892"
           }
         }
       ]
