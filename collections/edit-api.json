@@ -3073,216 +3073,6 @@
       ]
     },
     {
-      "name": "Audio",
-      "item": [
-        {
-          "name": "Simple audio stitch",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "85196074-8712-4870-9375-5aa285f6e160",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "d9d6b16a-0d84-4981-a5cb-29abb31bc968",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 8\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/unminus/ambisax.mp3\",\n                            \"effect\": \"fadeOut\"\n                        },\n                        \"start\": 8,\n                        \"length\": 8\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Merge/stitch two audio clips together to create a single track.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/ecac713c-fc16-4cab-87b5-be4559e106d4.mp3)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/ecac713c-fc16-4cab-87b5-be4559e106d4.mp3\",\n  \"description\": \"Merge/stitch two audio clips together to create a single track.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-stitch-2-tracks\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Seamless audio stitch",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "7e6e5f5e-b155-4bc1-9203-e02052175427",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "5ba973a5-c411-433e-ac50-86b99ec8f95a",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/claps.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 16\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/claps.mp3\"\n                        },\n                        \"start\": 16,\n                        \"length\": 16\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/claps.mp3\"\n                        },\n                        \"start\": 32,\n                        \"length\": 16\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"hd\",\n        \"quality\": \"high\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Cut and stitch an audio track back together again. Can be used to chop out sections of audio or adjust volume at different time intervals.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/15d50513-2dfc-476d-934f-397072721e14.mp3)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15d50513-2dfc-476d-934f-397072721e14.mp3\",\n  \"description\": \"Cut and stitch an audio track back together again. Can be used to chop out sections of audio or adjust volume at different time intervals.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-seamless-stitch\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
-          "name": "Audio multiple volumes",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "90eb5c78-a61b-4581-8838-9f7253406db9",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "c53a2e52-6beb-4030-a7bd-e5922658dc3c",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "cache-control",
-                "value": "no-cache"
-              },
-              {
-                "key": "content-type",
-                "value": "application/json"
-              },
-              {
-                "key": "postman-token",
-                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-                "disabled": true
-              },
-              {
-                "key": "x-api-key",
-                "type": "text",
-                "value": "{{SHOTSTACK_API_KEY}}"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.25,\n                            \"trim\": 3.96\n\n                        },\n                        \"start\": 4,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.8,\n                            \"trim\": 7.96\n\n                        },\n                        \"start\": 8,\n                        \"length\": 3.96\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "Adjust the volume of an audio track at multiple points along the timeline. The track is cut in to multiple sections, each with a different volume.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1e4ee349-2052-4240-a0f9-e370f1630ce5.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1e4ee349-2052-4240-a0f9-e370f1630ce5.mp4\",\n  \"description\": \"Adjust the volume of an audio track at multpile points along the timeline. The track is cut in to multiple sections, each with a different volume.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-multiple-volumes\"\n}\n-->"
-          },
-          "response": []
-        }
-      ],
-      "id": "b6bcd9b5-1f52-4648-8619-6d432093a6a3",
-      "description": "Audio editing and manipulation templates.",
-      "auth": {
-        "type": "apikey",
-        "apikey": {
-          "value": "{{SHOTSTACK_API_KEY}}",
-          "key": "x-api-key"
-        }
-      },
-      "event": [
-        {
-          "listen": "prerequest",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "b4194041-bfdf-4270-97e2-a977f8ad326c"
-          }
-        },
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              ""
-            ],
-            "id": "0690a711-09c8-4e9e-8649-076e24c24b14"
-          }
-        }
-      ]
-    },
-    {
       "name": "Ken Burns",
       "item": [
         {
@@ -6205,6 +5995,216 @@
             "exec": [
               ""
             ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Audio",
+      "item": [
+        {
+          "name": "Simple audio stitch",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "85196074-8712-4870-9375-5aa285f6e160",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "d9d6b16a-0d84-4981-a5cb-29abb31bc968",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 8\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/unminus/ambisax.mp3\",\n                            \"effect\": \"fadeOut\"\n                        },\n                        \"start\": 8,\n                        \"length\": 8\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Merge/stitch two audio clips together to create a single track.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/ecac713c-fc16-4cab-87b5-be4559e106d4.mp3)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/ecac713c-fc16-4cab-87b5-be4559e106d4.mp3\",\n  \"description\": \"Merge/stitch two audio clips together to create a single track.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-stitch-2-tracks\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Seamless audio stitch",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "7e6e5f5e-b155-4bc1-9203-e02052175427",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "5ba973a5-c411-433e-ac50-86b99ec8f95a",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/claps.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 16\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/claps.mp3\"\n                        },\n                        \"start\": 16,\n                        \"length\": 16\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3.ap-southeast-2.amazonaws.com/music/claps.mp3\"\n                        },\n                        \"start\": 32,\n                        \"length\": 16\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp3\",\n        \"resolution\": \"hd\",\n        \"quality\": \"high\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Cut and stitch an audio track back together again. Can be used to chop out sections of audio or adjust volume at different time intervals.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/15d50513-2dfc-476d-934f-397072721e14.mp3)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15d50513-2dfc-476d-934f-397072721e14.mp3\",\n  \"description\": \"Cut and stitch an audio track back together again. Can be used to chop out sections of audio or adjust volume at different time intervals.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-seamless-stitch\"\n}\n-->"
+          },
+          "response": []
+        },
+        {
+          "name": "Audio multiple volumes",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "90eb5c78-a61b-4581-8838-9f7253406db9",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "c53a2e52-6beb-4030-a7bd-e5922658dc3c",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "cache-control",
+                "value": "no-cache"
+              },
+              {
+                "key": "content-type",
+                "value": "application/json"
+              },
+              {
+                "key": "postman-token",
+                "value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+                "disabled": true
+              },
+              {
+                "key": "x-api-key",
+                "type": "text",
+                "value": "{{SHOTSTACK_API_KEY}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\"\n                        },\n                        \"start\": 0,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.25,\n                            \"trim\": 3.96\n\n                        },\n                        \"start\": 4,\n                        \"length\": 3.96\n                    },\n                    {\n                        \"asset\": {\n                            \"type\": \"audio\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/unminus/berlin.mp3\",\n                            \"volume\": 0.8,\n                            \"trim\": 7.96\n\n                        },\n                        \"start\": 8,\n                        \"length\": 3.96\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"sd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "Adjust the volume of an audio track at multiple points along the timeline. The track is cut in to multiple sections, each with a different volume.\n\n[Example MP3](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1e4ee349-2052-4240-a0f9-e370f1630ce5.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1e4ee349-2052-4240-a0f9-e370f1630ce5.mp4\",\n  \"description\": \"Adjust the volume of an audio track at multpile points along the timeline. The track is cut in to multiple sections, each with a different volume.\",\n  \"type\": \"audio\",\n  \"thumbnail\": \"https://shotstack.io/assets/img/learn/articles/aws-polly-thumb.jpg\",\n  \"poster\": \"\",\n  \"permalink\": \"audio-multiple-volumes\"\n}\n-->"
+          },
+          "response": []
+        }
+      ],
+      "id": "b6bcd9b5-1f52-4648-8619-6d432093a6a3",
+      "description": "Audio editing and manipulation templates.",
+      "auth": {
+        "type": "apikey",
+        "apikey": {
+          "value": "{{SHOTSTACK_API_KEY}}",
+          "key": "x-api-key"
+        }
+      },
+      "event": [
+        {
+          "listen": "prerequest",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "b4194041-bfdf-4270-97e2-a977f8ad326c"
+          }
+        },
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ],
+            "id": "0690a711-09c8-4e9e-8649-076e24c24b14"
           }
         }
       ]
