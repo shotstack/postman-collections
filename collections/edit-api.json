@@ -6699,7 +6699,7 @@
           "response": []
         },
         {
-          "name": "Sliding panels and text reveal effect intro",
+          "name": "Panels and text reveal effect intro",
           "event": [
             {
               "listen": "test",
