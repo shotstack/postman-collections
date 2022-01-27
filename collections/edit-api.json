@@ -2970,7 +2970,7 @@
           "response": []
         },
         {
-          "name": "Falling bars animation effect intro Copy",
+          "name": "Color fade transition intro",
           "event": [
             {
               "listen": "test",
