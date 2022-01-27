@@ -2882,7 +2882,7 @@
           "response": []
         },
         {
-          "name": "Horizontal panels animation intro Copy",
+          "name": "Diagonal  sliding panel intro",
           "event": [
             {
               "listen": "test",
