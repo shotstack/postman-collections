@@ -6655,7 +6655,7 @@
       "name": "Intros and Outros",
       "item": [
         {
-          "name": "Intro",
+          "name": "Curtain reveal intro",
           "event": [
             {
               "listen": "test",
