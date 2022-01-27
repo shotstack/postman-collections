@@ -6743,7 +6743,7 @@
           "response": []
         },
         {
-          "name": "Panels animation intro",
+          "name": "Horizontal panels animation intro",
           "event": [
             {
               "listen": "test",
