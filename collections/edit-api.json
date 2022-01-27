@@ -1011,50 +1011,6 @@
           "response": []
         },
         {
-          "name": "Hello World title & video Copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "id": "b28683c8-a0b0-4c4e-88ac-8064dba3ef4e",
-                "exec": [
-                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-                  ""
-                ],
-                "type": "text/javascript"
-              }
-            }
-          ],
-          "id": "bacfffb2-1a36-471e-85b5-73c0aa46dbf9",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "auth": {
-              "type": "apikey",
-              "apikey": {
-                "value": "{{SHOTSTACK_API_KEY}}",
-                "in": "header",
-                "key": "x-api-key"
-              }
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json"
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/motions.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"future\",\n                            \"position\": \"left\",\n                            \"size\": \"x-small\"\n                        },\n                        \"start\": 4,\n                        \"length\": 11,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        },\n                        \"effect\": \"zoomIn\"\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/earth.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 0,\n                        \"length\": 15,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-            },
-            "url": "https://api.shotstack.io/{{ENV}}/render",
-            "description": "A very simple hello world example with a title and video clip.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/63f907ba-dfa9-4200-b0e1-c2c9ac0c8333.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328.mp4\",\n  \"description\": \"A very simple hello world example with a title and video clip.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328-poster.jpg\",\n  \"permalink\": \"hello-world-title-video\"\n}\n-->"
-          },
-          "response": []
-        },
-        {
           "name": "Hello World animated GIF",
           "event": [
             {
@@ -6697,7 +6653,52 @@
     },
     {
       "name": "Intros and Outros",
-      "item": [],
+      "item": [
+        {
+          "name": "Hello World title & video Copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "id": "b28683c8-a0b0-4c4e-88ac-8064dba3ef4e",
+                "exec": [
+                  "pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+                  ""
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "id": "bacfffb2-1a36-471e-85b5-73c0aa46dbf9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": {
+                "value": "{{SHOTSTACK_API_KEY}}",
+                "in": "header",
+                "key": "x-api-key"
+              }
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/motions.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"title\",\n                            \"text\": \"Hello World\",\n                            \"style\": \"future\",\n                            \"position\": \"left\",\n                            \"size\": \"x-small\"\n                        },\n                        \"start\": 4,\n                        \"length\": 11,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        },\n                        \"effect\": \"zoomIn\"\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/footage/earth.mp4\",\n                            \"trim\": 5\n                        },\n                        \"start\": 0,\n                        \"length\": 15,\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+            },
+            "url": "https://api.shotstack.io/{{ENV}}/render",
+            "description": "A very simple hello world example with a title and video clip.\n\n![Hello world example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/63f907ba-dfa9-4200-b0e1-c2c9ac0c8333.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328.mp4\",\n  \"description\": \"A very simple hello world example with a title and video clip.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1ae1adac-f645-4eaf-9549-89f1318e6328-poster.jpg\",\n  \"permalink\": \"hello-world-title-video\"\n}\n-->"
+          },
+          "response": []
+        }
+      ],
       "id": "2a856547-e0e1-4284-abd3-a2085bd52c49"
     },
     {
