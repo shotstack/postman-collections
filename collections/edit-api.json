@@ -87,83 +87,6 @@
 					"response": []
 				},
 				{
-					"name": "Car Walkaround",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "apikey",
-							"apikey": [
-								{
-									"key": "value",
-									"value": "{{SHOTSTACK_API_KEY}}",
-									"type": "string"
-								},
-								{
-									"key": "in",
-									"value": "header",
-									"type": "string"
-								},
-								{
-									"key": "key",
-									"value": "x-api-key",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "cache-control",
-								"value": "no-cache"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "postman-token",
-								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{SHOTSTACK_API_KEY}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\",\n        \"poster\": {\n            \"capture\": 10\n        }\n    },\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3.amazonaws.com/music/hyper.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"fonts\": [\n            {\n                \"src\": \"https://templates.shotstack.io/basic/asset/font/montserrat-regular.ttf\"\n            },\n            {\n                \"src\": \"https://templates.shotstack.io/basic/asset/font/montserrat-bold.ttf\"\n            },\n            {\n                \"src\": \"https://templates.shotstack.io/basic/asset/font/montserrat-black.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"start\": 0,\n                        \"length\": 13,\n                        \"position\": \"bottomLeft\",\n                        \"asset\": {\n                            \"width\": 600,\n                            \"html\": \"<p class='title'>Lamborghini Huracan EVO Auto AWD</p><p class='subtitle'>2019 | 10cyl 5.2L Petrol | 17,100 kms</p>\",\n                            \"css\": \"p { text-align: left; color: #ffffff; } .title { font-family: 'Montserrat Black'; font-size: 42px; } .subtitle { font-family: 'Montserrat Bold'; font-size: 28px; color: #f1c40f; }\",\n                            \"type\": \"html\",\n                            \"height\": 180\n                        },\n                        \"offset\": {\n                            \"x\": 0.05,\n                            \"y\": 0.03\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"start\": 0,\n                        \"length\": 13,\n                        \"position\": \"bottomRight\",\n                        \"asset\": {\n                            \"width\": 600,\n                            \"html\": \"<p><span>Enquiries</span></p><p>Dean / 703-438-5736</p>\",\n                            \"css\": \"p { font-family: 'Montserrat Bold'; color: #ffffff; black; font-size: 28px; text-align: right; } span { color: #f1c40f; }\",\n                            \"type\": \"html\",\n                            \"height\": 160\n                        },\n                        \"offset\": {\n                            \"x\": -0.05,\n                            \"y\": 0\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.amazonaws.com/footage/luxury-car-1.mp4\"\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"start\": 4,\n                        \"length\": 5,\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.amazonaws.com/footage/luxury-car-2.mp4\"\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"start\": 8,\n                        \"length\": 5,\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.amazonaws.com/footage/luxury-car-3.mp4\"\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
-						},
-						"url": {
-							"raw": "https://api.shotstack.io/{{ENV}}/render",
-							"protocol": "https",
-							"host": [
-								"api",
-								"shotstack",
-								"io"
-							],
-							"path": [
-								"{{ENV}}",
-								"render"
-							]
-						},
-						"description": "Walkaround video of a luxury car with details of the car overlaid.\n\n![Car Walkaround](https://cdn.shotstack.io/au/v1/wzr6y0wtti/357ad59f-231b-4073-bd1c-1b8e8a918c8a.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4\",\n  \"description\": \"A mix of movement and text that conveys ideas and evokes emotion.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-poster.jpg\",\n  \"permalink\": \"car-walkaround-video\"\n}\n-->"
-					},
-					"response": []
-				},
-				{
 					"name": "Car dealer slideshow",
 					"event": [
 						{
@@ -622,6 +545,83 @@
 							]
 						},
 						"description": "A real estate slideshow video with overlay transitions and backgrounds, Ken Burns photo effects and real estate agent outro.\n\nThis template uses merge fields to replace content and variables.\n\n![Real estate example](https://cdn.shotstack.io/au/v1/msgtwx8iw6/572b92ad-8829-4a5d-9d9e-f2fc21c28655.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/b03c7b50-07f3-4463-992b-f5241ea15c18.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b03c7b50-07f3-4463-992b-f5241ea15c18.mp4\",\n  \"description\": \"A real estate slideshow video with overlay transitions and backgrounds, Ken Burns photo effects and real estate agent outro.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b03c7b50-07f3-4463-992b-f5241ea15c18-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/b03c7b50-07f3-4463-992b-f5241ea15c18-poster.jpg\",\n  \"permalink\": \"real-estate-slideshow-sd-overlays-merge\"\n}\n-->"
+					},
+					"response": []
+				},
+				{
+					"name": "Car Walkaround",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{SHOTSTACK_API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "in",
+									"value": "header",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "x-api-key",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "cache-control",
+								"value": "no-cache"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "postman-token",
+								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "{{SHOTSTACK_API_KEY}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\",\n        \"poster\": {\n            \"capture\": 10\n        }\n    },\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3.amazonaws.com/music/hyper.mp3\",\n            \"effect\": \"fadeOut\"\n        },\n        \"fonts\": [\n            {\n                \"src\": \"https://templates.shotstack.io/basic/asset/font/montserrat-regular.ttf\"\n            },\n            {\n                \"src\": \"https://templates.shotstack.io/basic/asset/font/montserrat-bold.ttf\"\n            },\n            {\n                \"src\": \"https://templates.shotstack.io/basic/asset/font/montserrat-black.ttf\"\n            }\n        ],\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"start\": 0,\n                        \"length\": 13,\n                        \"position\": \"bottomLeft\",\n                        \"asset\": {\n                            \"width\": 600,\n                            \"html\": \"<p class='title'>Lamborghini Huracan EVO Auto AWD</p><p class='subtitle'>2019 | 10cyl 5.2L Petrol | 17,100 kms</p>\",\n                            \"css\": \"p { text-align: left; color: #ffffff; } .title { font-family: 'Montserrat Black'; font-size: 42px; } .subtitle { font-family: 'Montserrat Bold'; font-size: 28px; color: #f1c40f; }\",\n                            \"type\": \"html\",\n                            \"height\": 180\n                        },\n                        \"offset\": {\n                            \"x\": 0.05,\n                            \"y\": 0.03\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"start\": 0,\n                        \"length\": 13,\n                        \"position\": \"bottomRight\",\n                        \"asset\": {\n                            \"width\": 600,\n                            \"html\": \"<p><span>Enquiries</span></p><p>Dean / 703-438-5736</p>\",\n                            \"css\": \"p { font-family: 'Montserrat Bold'; color: #ffffff; black; font-size: 28px; text-align: right; } span { color: #f1c40f; }\",\n                            \"type\": \"html\",\n                            \"height\": 160\n                        },\n                        \"offset\": {\n                            \"x\": -0.05,\n                            \"y\": 0\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.amazonaws.com/footage/luxury-car-1.mp4\"\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"start\": 4,\n                        \"length\": 5,\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.amazonaws.com/footage/luxury-car-2.mp4\"\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    },\n                    {\n                        \"start\": 8,\n                        \"length\": 5,\n                        \"asset\": {\n                            \"type\": \"video\",\n                            \"src\": \"https://shotstack-assets.s3.amazonaws.com/footage/luxury-car-3.mp4\"\n                        },\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    }\n}"
+						},
+						"url": {
+							"raw": "https://api.shotstack.io/{{ENV}}/render",
+							"protocol": "https",
+							"host": [
+								"api",
+								"shotstack",
+								"io"
+							],
+							"path": [
+								"{{ENV}}",
+								"render"
+							]
+						},
+						"description": "Walkaround video of a luxury car with details of the car overlaid.\n\n![Car Walkaround](https://cdn.shotstack.io/au/v1/wzr6y0wtti/357ad59f-231b-4073-bd1c-1b8e8a918c8a.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4\",\n  \"description\": \"A mix of movement and text that conveys ideas and evokes emotion.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-poster.jpg\",\n  \"permalink\": \"car-walkaround-video\"\n}\n-->"
 					},
 					"response": []
 				},
