@@ -159,7 +159,7 @@
 								"render"
 							]
 						},
-						"description": "Walkaround video of a luxury car with details of the car overlaid.\n\n![Car Walkaround](https://cdn.shotstack.io/au/v1/wzr6y0wtti/357ad59f-231b-4073-bd1c-1b8e8a918c8a.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4\",\n  \"description\": \"A mix of movement and text that conveys ideas and evokes emotion.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-poster.jpg\",\n  \"permalink\": \"kinetic-text\"\n}\n-->"
+						"description": "Walkaround video of a luxury car with details of the car overlaid.\n\n![Car Walkaround](https://cdn.shotstack.io/au/v1/wzr6y0wtti/357ad59f-231b-4073-bd1c-1b8e8a918c8a.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5.mp4\",\n  \"description\": \"A mix of movement and text that conveys ideas and evokes emotion.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/wzr6y0wtti/f671792c-0559-4114-8217-334c413badc5-poster.jpg\",\n  \"permalink\": \"car-walkaround\"\n}\n-->"
 					},
 					"response": []
 				},
