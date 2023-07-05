@@ -17,6 +17,7 @@
 						{
 							"listen": "test",
 							"script": {
+								"id": "daef7a84-018a-4e48-9c2a-a06fd238bb49",
 								"exec": [
 									"pm.environment.set(\"RENDER_ID\", pm.response.json().response.id);\r",
 									""
