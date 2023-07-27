@@ -1184,195 +1184,6 @@
 			"id": "2a856547-e0e1-4284-abd3-a2085bd52c49"
 		},
 		{
-			"name": "Ken Burns",
-			"item": [
-				{
-					"name": "Ken burns slideshow effect",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "f1d8f7dc-2211-4889-944d-45a54de33ac1",
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);\r",
-									"postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "0dde5b6b-56b5-4d56-aec1-2d24ee8e7912",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "cache-control",
-								"value": "no-cache"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "postman-token",
-								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{SHOTSTACK_API_KEY}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/advertising.mp3\",\n            \"effect\": \"fadeInFadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 4,\n                        \"length\": 5,\n                        \"effect\": \"slideUp\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 8,\n                        \"length\": 5,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 12,\n                        \"length\": 5,\n                        \"effect\": \"zoomOut\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 16,\n                        \"length\": 5,\n                        \"effect\": \"slideDown\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 20,\n                        \"length\": 5,\n                        \"effect\": \"slideRight\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 24,\n                        \"length\": 5,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-						},
-						"url": "https://api.shotstack.io/{{ENV}}/render",
-						"description": "A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image.\n\n![Ken Burns effect preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/48514d30-605c-4eb2-8006-b5d69169171b.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f.mp4\",\n  \"description\": \"A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f-poster.jpg\",\n  \"permalink\": \"ken-burns-effect-slideshow\"\n}\n-->"
-					},
-					"response": []
-				},
-				{
-					"name": "Ken burns slideshow effect (slow)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "c803f892-ed47-4758-802a-78c3d5dd17c4",
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);\r",
-									"postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "98a23482-e28d-4161-993f-72423ad1ada3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "cache-control",
-								"value": "no-cache"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "postman-token",
-								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{SHOTSTACK_API_KEY}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/advertising.mp3\",\n            \"effect\": \"fadeInFadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 0,\n                        \"length\": 6,\n                        \"effect\": \"zoomInSlow\",\n                        \"transition\": {\n                            \"in\": \"fadeSlow\",\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 4,\n                        \"length\": 6,\n                        \"effect\": \"slideUpSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 8,\n                        \"length\": 6,\n                        \"effect\": \"slideLeftSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 12,\n                        \"length\": 6,\n                        \"effect\": \"zoomOutSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 16,\n                        \"length\": 6,\n                        \"effect\": \"slideDownSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 20,\n                        \"length\": 6,\n                        \"effect\": \"slideRightSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 24,\n                        \"length\": 6,\n                        \"effect\": \"zoomInSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-						},
-						"url": "https://api.shotstack.io/{{ENV}}/render",
-						"description": "A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses slow motion effects.\n\n![Ken Burns slow preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/900ad2ae-8f53-4bfe-a0b9-917a7fe4498d.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3.mp4\",\n  \"description\": \"A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses slow motion effects.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3-poster.jpg\",\n  \"permalink\": \"ken-burns-effect-slideshow-slow\"\n}\n-->"
-					},
-					"response": []
-				},
-				{
-					"name": "Ken Burns slideshow effect (fast)",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "86287497-9d90-4ef0-99f4-52c6310e9274",
-								"exec": [
-									"var jsonData = JSON.parse(responseBody);\r",
-									"postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"id": "e59c4ee1-0ad7-445d-8cfa-ad2cc3a898a3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "cache-control",
-								"value": "no-cache"
-							},
-							{
-								"key": "content-type",
-								"value": "application/json"
-							},
-							{
-								"key": "postman-token",
-								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
-								"disabled": true
-							},
-							{
-								"key": "x-api-key",
-								"type": "text",
-								"value": "{{SHOTSTACK_API_KEY}}"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/advertising.mp3\",\n            \"effect\": \"fadeInFadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"effect\": \"zoomInFast\",\n                        \"transition\": {\n                            \"in\": \"fadeFast\",\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 4.5,\n                        \"length\": 5,\n                        \"effect\": \"slideUpFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 9,\n                        \"length\": 5,\n                        \"effect\": \"slideLeftFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 13.5,\n                        \"length\": 5,\n                        \"effect\": \"zoomOutFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 18,\n                        \"length\": 5,\n                        \"effect\": \"slideDownFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 22.5,\n                        \"length\": 5,\n                        \"effect\": \"slideRightFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 27,\n                        \"length\": 5,\n                        \"effect\": \"zoomInFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
-						},
-						"url": "https://api.shotstack.io/{{ENV}}/render",
-						"description": "A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses fast motion effects.\n\n![Ken Burns fast preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/f09bdff8-f045-4707-83eb-4159d5066af1.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8.mp4\",\n  \"description\": \"A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses fast motion effects.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8-poster.jpg\",\n  \"permalink\": \"ken-burns-effect-slideshow-fast\"\n}\n-->"
-					},
-					"response": []
-				}
-			],
-			"id": "a7f75a32-d5e0-4bb3-9094-812525848a01",
-			"description": "Ken Burns slideshow videos using still images and simple panning and zooming.",
-			"auth": {
-				"type": "apikey",
-				"apikey": {
-					"value": "{{SHOTSTACK_API_KEY}}",
-					"key": "x-api-key"
-				}
-			},
-			"event": [
-				{
-					"listen": "prerequest",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						],
-						"id": "e73abe12-e9a4-48c7-9bdc-bb6d81a10a5b"
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"type": "text/javascript",
-						"exec": [
-							""
-						],
-						"id": "c979b797-41b0-4b45-8492-1efba7cc29e3"
-					}
-				}
-			]
-		},
-		{
 			"name": "Basic Edits",
 			"item": [
 				{
@@ -3664,6 +3475,195 @@
 				}
 			],
 			"id": "5000ca88-585f-4df0-813a-fc60fe01b045"
+		},
+		{
+			"name": "Ken Burns",
+			"item": [
+				{
+					"name": "Ken burns slideshow effect",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f1d8f7dc-2211-4889-944d-45a54de33ac1",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0dde5b6b-56b5-4d56-aec1-2d24ee8e7912",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cache-control",
+								"value": "no-cache"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "postman-token",
+								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "{{SHOTSTACK_API_KEY}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/advertising.mp3\",\n            \"effect\": \"fadeInFadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"in\": \"fade\",\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 4,\n                        \"length\": 5,\n                        \"effect\": \"slideUp\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 8,\n                        \"length\": 5,\n                        \"effect\": \"slideLeft\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 12,\n                        \"length\": 5,\n                        \"effect\": \"zoomOut\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 16,\n                        \"length\": 5,\n                        \"effect\": \"slideDown\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 20,\n                        \"length\": 5,\n                        \"effect\": \"slideRight\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 24,\n                        \"length\": 5,\n                        \"effect\": \"zoomIn\",\n                        \"transition\": {\n                            \"out\": \"fade\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+						},
+						"url": "https://api.shotstack.io/{{ENV}}/render",
+						"description": "A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image.\n\n![Ken Burns effect preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/48514d30-605c-4eb2-8006-b5d69169171b.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f.mp4\",\n  \"description\": \"A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/734ac9b9-0f87-489c-95d2-28f4039d204f-poster.jpg\",\n  \"permalink\": \"ken-burns-effect-slideshow\"\n}\n-->"
+					},
+					"response": []
+				},
+				{
+					"name": "Ken burns slideshow effect (slow)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c803f892-ed47-4758-802a-78c3d5dd17c4",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "98a23482-e28d-4161-993f-72423ad1ada3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cache-control",
+								"value": "no-cache"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "postman-token",
+								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "{{SHOTSTACK_API_KEY}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/advertising.mp3\",\n            \"effect\": \"fadeInFadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 0,\n                        \"length\": 6,\n                        \"effect\": \"zoomInSlow\",\n                        \"transition\": {\n                            \"in\": \"fadeSlow\",\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 4,\n                        \"length\": 6,\n                        \"effect\": \"slideUpSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 8,\n                        \"length\": 6,\n                        \"effect\": \"slideLeftSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 12,\n                        \"length\": 6,\n                        \"effect\": \"zoomOutSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 16,\n                        \"length\": 6,\n                        \"effect\": \"slideDownSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 20,\n                        \"length\": 6,\n                        \"effect\": \"slideRightSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 24,\n                        \"length\": 6,\n                        \"effect\": \"zoomInSlow\",\n                        \"transition\": {\n                            \"out\": \"fadeSlow\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+						},
+						"url": "https://api.shotstack.io/{{ENV}}/render",
+						"description": "A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses slow motion effects.\n\n![Ken Burns slow preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/900ad2ae-8f53-4bfe-a0b9-917a7fe4498d.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3.mp4\",\n  \"description\": \"A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses slow motion effects.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/1a86e7c5-37ab-4398-b651-8a5ea9a7e6a3-poster.jpg\",\n  \"permalink\": \"ken-burns-effect-slideshow-slow\"\n}\n-->"
+					},
+					"response": []
+				},
+				{
+					"name": "Ken Burns slideshow effect (fast)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "86287497-9d90-4ef0-99f4-52c6310e9274",
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"RENDER_ID\", jsonData.response.id);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "e59c4ee1-0ad7-445d-8cfa-ad2cc3a898a3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cache-control",
+								"value": "no-cache"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "postman-token",
+								"value": "c4fb3ab2-6c1c-895e-8021-d1d25bc4f3b3",
+								"disabled": true
+							},
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "{{SHOTSTACK_API_KEY}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"timeline\": {\n        \"soundtrack\": {\n            \"src\": \"https://shotstack-assets.s3-ap-southeast-2.amazonaws.com/music/freepd/advertising.mp3\",\n            \"effect\": \"fadeInFadeOut\"\n        },\n        \"background\": \"#000000\",\n        \"tracks\": [\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 0,\n                        \"length\": 5,\n                        \"effect\": \"zoomInFast\",\n                        \"transition\": {\n                            \"in\": \"fadeFast\",\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1680140/pexels-photo-1680140.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 4.5,\n                        \"length\": 5,\n                        \"effect\": \"slideUpFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 9,\n                        \"length\": 5,\n                        \"effect\": \"slideLeftFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 13.5,\n                        \"length\": 5,\n                        \"effect\": \"zoomOutFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1452701/pexels-photo-1452701.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 18,\n                        \"length\": 5,\n                        \"effect\": \"slideDownFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/756856/pexels-photo-756856.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 22.5,\n                        \"length\": 5,\n                        \"effect\": \"slideRightFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            },\n            {\n                \"clips\": [\n                    {\n                        \"asset\": {\n                            \"type\": \"image\",\n                            \"src\": \"https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=720&w=1280\"\n                        },\n                        \"start\": 27,\n                        \"length\": 5,\n                        \"effect\": \"zoomInFast\",\n                        \"transition\": {\n                            \"out\": \"fadeFast\"\n                        }\n                    }\n                ]\n            }\n        ]\n    },\n    \"output\": {\n        \"format\": \"mp4\",\n        \"resolution\": \"hd\"\n    }\n}"
+						},
+						"url": "https://api.shotstack.io/{{ENV}}/render",
+						"description": "A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses fast motion effects.\n\n![Ken Burns fast preview](https://cdn.shotstack.io/au/v1/msgtwx8iw6/f09bdff8-f045-4707-83eb-4159d5066af1.gif)\n\n[Example MP4](https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8.mp4)\n\n<!--\n{\n  \"url\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8.mp4\",\n  \"description\": \"A slideshow of still images animated left, right, up, down, in and out. This effects is called the Ken Burns effect. Each image fades in to the next image. This version uses fast motion effects.\",\n  \"type\": \"video\",\n  \"thumbnail\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8-thumb.jpg\",\n  \"poster\": \"https://cdn.shotstack.io/au/v1/msgtwx8iw6/15eaee39-3b06-428e-8899-0269ff7935d8-poster.jpg\",\n  \"permalink\": \"ken-burns-effect-slideshow-fast\"\n}\n-->"
+					},
+					"response": []
+				}
+			],
+			"id": "a7f75a32-d5e0-4bb3-9094-812525848a01",
+			"description": "Ken Burns slideshow videos using still images and simple panning and zooming.",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"value": "{{SHOTSTACK_API_KEY}}",
+					"key": "x-api-key"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "e73abe12-e9a4-48c7-9bdc-bb6d81a10a5b"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "c979b797-41b0-4b45-8492-1efba7cc29e3"
+					}
+				}
+			]
 		},
 		{
 			"name": "Luma Mattes",
