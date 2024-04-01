@@ -7201,7 +7201,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://api.shotstack.io/{{ENV}}/render/{{RENDER_ID}}?timeline=false",
+					"raw": "https://api.shotstack.io/{{ENV}}/render/{{RENDER_ID}}?data=false",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -7215,13 +7215,13 @@
 					],
 					"query": [
 						{
-							"key": "timeline",
-							"value": "false"
-						},
-						{
 							"key": "merge",
 							"value": "false",
 							"disabled": true
+						},
+						{
+							"key": "data",
+							"value": "false"
 						}
 					]
 				},
